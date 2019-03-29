@@ -14,13 +14,12 @@ class TabelaAluguel extends Migration
     public function up()
     {
         Schema::create('aluguel', function (Blueprint $table) {
-            $table->integer('id');
+            $table->integer('id')->autoIncrement();
             $table->char('cliente',11);
             $table->integer('carro');
             $table->dateTimeTz('data_inicio');
             $table->dateTimeTz('data_fim');
             $table->float('valor_total');
-            $table->primary('id');
             $table->foreign('cliente')->references('cpf')->on('clientes');
             $table->foreign('carro')->references('id')->on('carros');
             $table->timestamps();

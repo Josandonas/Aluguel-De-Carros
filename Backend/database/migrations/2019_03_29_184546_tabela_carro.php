@@ -14,16 +14,15 @@ class TabelaCarro extends Migration
     public function up()
     {
         Schema::create('carros', function (Blueprint $table) {
-            $table->integer('id');
+            $table->integer('id')->autoIncrement();
             $table->string('nome');
             $table->string('modelo');
-            $table->integer('categoria');
+            $table->integer('caracteristica');
             $table->char('agencia', 14);
             $table->float('valor');
             $table->tinyInteger('disponivel');
             $table->longText('imagem');
-            $table->primary('id');
-            $table->foreign('categoria')->references('id')->on('categorias');
+            $table->foreign('caracteristica')->references('id')->on('caracteristicas');
             $table->foreign('agencia')->references('cnpj')->on('agencia');
             $table->timestamps();
         });

@@ -14,11 +14,8 @@ class TabelaCategoria extends Migration
     public function up()
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->integer('id');
+            $table->integer('id')->autoIncrement();
             $table->string('nome_categoria');
-            $table->integer('caracteristica');
-            $table->primary('id');
-            $table->foreign('caracteristica')->references('id')->on('caracteristicas');
             $table->timestamps();
         });
     }
