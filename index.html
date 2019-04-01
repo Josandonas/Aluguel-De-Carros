@@ -42,13 +42,14 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Serviços de Aluguel</a>
+            <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
           </li>
-    
-
-  
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="cadastro.html">Cadastro</a>
+            <a class="nav-link js-scroll-trigger" href="#Cadastro">Cadastro Garagem</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#cadas1" >Cadastro</a>
           </li>      
       
           <li class="nav-item">
@@ -58,11 +59,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger"  data-toggle="modal" data-target="#exampleModal">login </a>
           </li>
-
-
-
-  
-  
         </ul>
     
       </div>
@@ -115,12 +111,7 @@
 
           <i class="fa fa-cog fa-spin fa-8x fa-fw" aria-hidden="true"></i>
           <span class="sr-only">Saving. Hang tight!</span>
-          <!--
-          <span class="fa-stack fa-4x">
-            
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>-->
+    
           <h4 class="service-heading">Segurança no pagamento</h4>
           <p class="text-muted">Você faz um negócio com uma marca reconhecida pela excelência e valorização do cliente.</p>
         </div>
@@ -190,10 +181,9 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" class="row d-flex justify-content-center">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+          <h5 class="modal-title" id="exampleModalLabel" >Login</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+        
       </div>
       <div class="modal-body">
         <!-- body -->
@@ -209,31 +199,95 @@
                   <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
                   <input class="form-control" type="password" placeholder="Senha" required autofocus>
                 </div>
-               <!-- body 
-                  <div class="input-group margin-bottom-sm">
-                      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                      <input class="form-control" type="text" placeholder="Email address">
-                  </div>
-                  <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                      <input class="form-control" type="password" placeholder="Password">
-                  </div>
-
-
-
-              <input type="email" class="form-control" placeholder="Email" required autofocus />
-              <input type="password" class="form-control" placeholder="Senha" required autofocus/>-->
             </div>
           </form>
         </div>
         <!-- footer -->
         <div class="modal-footer">
-           <input class="btn btn-primary btn-block" type="submit" value="Entrar" class="btn">
-        </div>      
+           <input class="btn btn-success btn-lg  btn-block " type="submit" value="Entrar" class="btn">
+        </div> 
+
+        <div class="modal-footer">
+            <a href="#"> Não tem uma conta ainda?</a>
+            <input class="btn btn-info btn-lg  btn-block " type="submit" value=" Crie sua Conta" class="btn" data-toggle="modal" data-target="#cadas1">
+        </div>  
+
       </div>
     </div>
   </div>
 </div>
+<!--  end-Modal -->
+
+
+<!-- Modal -->
+
+  <div class="modal fade" id="cadas1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" >Cadastre-se</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Nome:</label> 
+                        <input type="text" class="form-control" id="nome" placeholder="Nome Completo" ng-model="cadastroNome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputCpf">CPF:</label> 
+                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" maxlength="14"  OnKeyPress="formatar('###.###.###-##', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label> <input type="email" class="form-control" id="email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputSenha">Senha:</label> 
+                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" ng-model="cadastroSenha">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConfSenha">Confirmação da Senha:</label> 
+                        <input type="password" class="form-control" id="inputConfSenha" placeholder="Confirme sua senha" ng-model="cadastroConfSenha">
+                    </div>
+                </form>
+            </div>
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+            </div>
+            <!-- end footer -->
+
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+</div>
+<!--  end-Modal -->
+
+<!--  script que realiza o formato tanto do cpf-telefone -->
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }  
+}
+</script>
+<!--   fim do script  -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
