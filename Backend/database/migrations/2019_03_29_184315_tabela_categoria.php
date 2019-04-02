@@ -16,6 +16,7 @@ class TabelaCategoria extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->string('nome_categoria');
+            $table->float('valor');
             $table->timestamps();
         });
     }

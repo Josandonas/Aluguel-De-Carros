@@ -12,15 +12,18 @@ class CategoriaSeeder extends Seeder
     public function run()
     {
        DB::table('categorias')->insert([
-           'nome_categoria' => 'Basico'
+           'nome_categoria' => 'Basico',
+           'valor'=> 35.00
        ]);
 
        DB::table('categorias')->insert([
-        'nome_categoria' => 'Intermediario'
+        'nome_categoria' => 'Intermediario',
+        'valor' => 100
         ]);
 
        DB::table('categorias')->insert([
-            'nome_categoria' => 'Luxo'
+            'nome_categoria' => 'Luxo',
+            'valor' => 200
        ]);
     }
 }
