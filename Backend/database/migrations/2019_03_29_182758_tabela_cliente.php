@@ -14,7 +14,8 @@ class TabelaCliente extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->char('cpf',11);
+            $table->char('cpf',14);
+            $table->string('nome');
             $table->string('email');
             $table->string('senha');
             $table->primary('cpf');
