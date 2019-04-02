@@ -34,7 +34,18 @@ class CarrosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $carro = new Carros;
+        $carro->nome = $request->nome;
+        $carro->modelo = $request->modelo;
+        $carro->caracteristica = $request->caracteristica;
+        $carro->agencia = $request->agencia;
+        $carro->valor = $request->valor;
+        $carro->disponivel = $request->disponivel;
+        $carro->imagem = $request->imagem; 
+        $carro->categoria = $request->categoria;
+        $carro->save();
+
+
     }
 
     /**
