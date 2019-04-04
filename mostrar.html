@@ -33,6 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
+
       <a class="navbar-brand" href="index.html">Voltar para Home-Page</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -42,7 +43,7 @@
         <ul class="navbar-nav text-uppercase ml-auto">
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#cadas1" >Cadastro de Garagem</a>
+            <a class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro de Garagem</a>
           </li>
 
           <li class="nav-item">
@@ -55,8 +56,9 @@
   </nav>
   <!-- Header -->
   
-  <header class="masthead">
+  <header class="masthead" >
     <div class="container">
+      
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase">Veja</div>
@@ -65,8 +67,10 @@
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#luxo"> Modelos de Luxo</a>        
         <div class="intro-heading text-uppercase">Alugamos Diversos Modelos de Carros</div>
       </div>
+      
     </div>
   </header>
+  
 
 
 
@@ -119,6 +123,7 @@
               </a>
             </div>
         </div>
+        <a href="mostrar.html"><button type="button" class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button></a>
   </section>
 
 
@@ -168,6 +173,7 @@
               </a>
             </div>
         </div>
+        <a href="mostrar.html"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
   </section>
 
  <section id="luxo" class="background-color">
@@ -217,8 +223,12 @@
               </a>
             </div>
         </div>
+        <a href="mostrar.html"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
   </section>
-  
+
+
+
+
   <!-- Footer -->
   <footer>
     <div class="container" >
@@ -325,11 +335,20 @@
 </div>
 <!--  end-Modal -->
 
+<!--  script que realiza o formato tanto do cpf-telefone -->
 <script>
-function myFunction() {
-  alert(document.getElementById("myDiv").style.backgroundColor);
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }  
 }
 </script>
+<!--   fim do script  -->
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
