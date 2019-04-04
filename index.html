@@ -44,9 +44,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Cadastro">Cadastro Garagem</a>
-          </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#cadasgaragem" >Cadastro Garagem</a>
+          </li>  
 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#cadas1" >Cadastro</a>
@@ -176,7 +176,8 @@
     </div>
   </footer>
 
-<!-- Modal -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Modal  login -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -216,10 +217,69 @@
     </div>
   </div>
 </div>
-<!--  end-Modal -->
+<!--  end-Modal login  -->
 
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-<!-- Modal -->
+<!-- Modal form cadastro garagem -->
+<div class="modal fade" id="cadasgaragem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" >Cadastre-se</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Nome da Garagem:</label> 
+                        <input type="text" class="form-control" id="nome" placeholder="Nome da Garagem" ng-model="cadastroNome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputCpf">CNPJ:</label> 
+                        <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label> <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" ng-model="cadastroEmail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputSenha">Senha:</label> 
+                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" ng-model="cadastroSenha">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConfSenha">Confirmação da Senha:</label> 
+                        <input type="password" class="form-control" id="inputConfSenha" placeholder="Confirme sua senha" ng-model="cadastroConfSenha">
+                    </div>
+                </form>
+            </div>
+ <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+            </div>
+            <!-- end footer -->
+
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+</div>
+
+<!--  end-Modal form cadastro garagem  -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<!-- Modal form cadastro pessoa -->
 
   <div class="modal fade" id="cadas1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
@@ -273,7 +333,9 @@
         </div>
     </div>
 </div>
-<!--  end-Modal -->
+<!--  end-Modal form cadastro pessoa -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 <!--  script que realiza o formato tanto do cpf-telefone -->
 <script>
