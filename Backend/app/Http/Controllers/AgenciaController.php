@@ -13,7 +13,7 @@ class AgenciaController extends Controller
      */
     public function index()
     {
-        //
+        return view('/agencias');
     }
 
     /**
@@ -23,7 +23,7 @@ class AgenciaController extends Controller
      */
     public function create()
     {
-        //
+        return view('criarAgencia');
     }
 
     /**
@@ -34,7 +34,13 @@ class AgenciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gar = new Agencia();
+
+        $gar->cnpj = $request->input('cnpj');
+        $gar->razao_social = $request->input('razao_social');
+        $gar->endereco = $gar->endereco($request->input('cep'));
+
+        $gar->save();
     }
 
     /**
@@ -45,7 +51,9 @@ class AgenciaController extends Controller
      */
     public function show($id)
     {
-        //
+        $gar = Agencia::find($id);
+
+        return $gar;
     }
 
     /**
@@ -56,7 +64,11 @@ class AgenciaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $gar = Agencia::find($id);
+
+        if(isset($gar)){
+            return view('editargaragem',compact('gar'));
+        }
     }
 
     /**
@@ -68,7 +80,15 @@ class AgenciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $gar = Agencia::find($id);
+
+        if(isset($gar)){
+            $gar->cnpj = $request->input('cnpj');
+            $gar->razao_social = $request->input('razao_social');
+
+            $gar->save();
+        }
+        return redirect('/garagem');
     }
 
     /**
@@ -79,6 +99,11 @@ class AgenciaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $gar = Agencia::find($id);
+
+        if(isset($gar)){
+            $gar->delete();
+        }
+        return redirect('/garagem');
     }
 }
