@@ -13,7 +13,7 @@ class EnderecoController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -23,7 +23,7 @@ class EnderecoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +34,15 @@ class EnderecoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $end = new Endereco();
+        $end->cidade = $request->input('cidade');
+        $end->estado = $request->input('estado');
+        $end->rua = $request->input('rua');
+        $end->numero = $request->input('numero');
+        $end->cep = $request->input('cep');
+
+        $end->save();
+
     }
 
     /**
@@ -56,7 +64,12 @@ class EnderecoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $end = Endereco::find($id);
+        if(isset($end)){
+            return view('',compact('cat'));
+        }else{
+            return redirect('/garagem');
+        }
     }
 
     /**
@@ -68,7 +81,18 @@ class EnderecoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $end = Endereco::find($id);
+        if(isset($end)){
+            $end->cidade = $request->input('cidade');
+            $end->estado = $request->input('estado');
+            $end->rua = $request->input('rua');
+            $end->numero = $request->input('numero');
+            $end->cep = $request->input('cep');
+
+            $end->save();
+        }else{
+            return redirect('/garagem');
+        }
     }
 
     /**
