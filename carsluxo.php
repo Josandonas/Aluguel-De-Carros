@@ -179,10 +179,10 @@
                     </div>
                     <div class="modal-body">
                       <h5>A diária é equivalente: R$ 200,00</h5>
-                      <p>Potência: Motor 6.0 litros V12 Potência de 612 cavalos</p>
+                      <p>Potência: 612 cavalos</p>
                       <p>Aceleração: De 0 a 250 km/h em 5,1 segundos</p>
                       <p>Dimensões: 6 Metros de Comprimento x 2 metros de Altura</p>
-                      <p>Motor: 6,0 V12 (612 cv)</p>
+                      <p>Motor: 6.0 litros V12 (612 cv)</p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
