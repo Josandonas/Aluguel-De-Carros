@@ -44,7 +44,8 @@
                   <ul class="navbar-nav text-uppercase ml-auto">                
                     <li class="nav-item">
                       <!--https://forum.imasters.com.br/topic/466064-exibir-nome-do-usu%C3%A1rio-logado/    link para colocar nome na page-->
-                      <a class="nav-link js-scroll-trigger"><h1><strong></strong></h1></a>
+                      <a class="nav-link js-scroll-trigger"><h1><strong>
+         <?php/* echo $listar['nome'] */?></strong></h1></a>
                     </li>
 
                   </ul>
@@ -71,66 +72,68 @@
             </header>
             <!-- end Header -->
                                           <section id="cate">
-                                          <div class="row">
-
-                                              <div class="card" style="width: 19rem;">
-                                                  <img class="card-img-top img-fluid" src="./img/carluxo/porscheBoxter.jpg" >
-                                                  <div class="card-body">
-                                                    <h5 class="card-title text-center" >Categoria</h5>
-                                                      <h5 class="card-title text-center" >Luxo</h5>
-                                                  </div>
-                                                  <button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button>
-                                              </div>
-                                              
-
-                                              
-                                                <div class="card" style="width: 19rem;">
-                                                  <img class="card-img-top img-fluid" src="./img/intermediarios/hondaCivic.jpg" >
-                                                  <div class="card-body">
-                                                   <h5 class="card-title text-center"  >Categoria </h5>
-                                                      <h5 class="card-title text-center"  >Intermediarios(Automático)</h5>
-                                                      <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
-                                                  </div>
-                                                  <button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button>
-                                                </div>
-                                              
-
-                                              
-                                                <div class="card" style="width: 19rem;">
-                                                  <img class="card-img-top img-fluid" src="./img/intermediarios/jeep.jpg">
-                                                  <div class="card-body">
-                                                      <h5 class="card-title text-center"  >Categoria </h5>
-                                                      <h5 class="card-title text-center"  >Intermediarios(Manual)</h5>
-                                                      <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
-                                                  </div>
-                                                  <button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button>
-                                                </div>
-                                              
-
-                                              
-                                                <div class="card" style="width: 19rem;">
-                                                  <img class="card-img-top img-fluid" src="./img/carbasic/faituno.jpg" >
-                                                  <div class="card-body">
-                                                      <h5 class="card-title text-center"  >Categoria </h5>
-                                                      <h5 class="card-title text-center"  >Básicos(Automático)</h5>
-                                                      <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
-                                                  </div>
-                                                  <button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button>
-                                                </div>
-                                              
-                                              
+                                            <div class="row">
 
                                                 <div class="card" style="width: 19rem;">
-                                                  <img class="card-img-top img-fluid" src="./img/carbasic/fordka.jpeg" >
-                                                  <div class="card-body">
-                                                      <h5 class="card-title text-center"  >Categoria </h5>
-                                                      <h5 class="card-title text-center"  >Básicos(Manual)</h5>
-                                                      <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
-                                                  </div>
-                                                  <button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button>
+                                                    <img class="card-img-top img-fluid" src="./img/carluxo/porscheBoxter.jpg" >
+                                                    <div class="card-body">
+                                                      <h5 class="card-title text-center" >Categoria</h5>
+                                                        <h5 class="card-title text-center" >Luxo</h5>
+                                                    </div>
+                                                    <a href="carsluxo.php"><button type="button" class="btn btn-primary btn-block" >Selecionar Categoria</button></a>
                                                 </div>
-                                        </div>
-                                        </div>
+                                                
+
+                                                
+                                                  <div class="card" style="width: 19rem;">
+                                                    <img class="card-img-top img-fluid" src="./img/intermediarios/hondaCivic.jpg" >
+                                                    <div class="card-body">
+                                                     <h5 class="card-title text-center"  >Categoria </h5>
+                                                        <h5 class="card-title text-center"  >Intermediarios(Automático)</h5>
+                                                        <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
+                                                    </div>
+                                                    <a href="carIauto.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                  </div>
+                                                
+
+                                                
+                                                  <div class="card" style="width: 19rem;">
+                                                    <img class="card-img-top img-fluid" src="./img/intermediarios/jeep.jpg">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center"  >Categoria </h5>
+                                                        <h5 class="card-title text-center"  >Intermediarios(Manual)</h5>
+                                                        <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
+                                                    </div>
+                                                    <a href="carImanu.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                  </div>
+                                                
+
+                                                
+                                                  <div class="card" style="width: 19rem;">
+                                                    <img class="card-img-top img-fluid" src="./img/carbasic/faituno.jpg" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center"  >Categoria </h5>
+                                                        <h5 class="card-title text-center"  >Básicos(Automático)</h5>
+                                                        <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
+                                                    </div>
+                                                    <a href="carBauto.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                  </div>
+                                                
+                                                
+
+                                                  <div class="card" style="width: 19rem;">
+                                                    <img class="card-img-top img-fluid" src="./img/carbasic/fordka.jpeg" >
+                                                    <div class="card-body">
+                                                        <h5 class="card-title text-center"  >Categoria </h5>
+                                                        <h5 class="card-title text-center"  >Básicos(Manual)</h5>
+                                                        <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
+                                                    </div>
+                                                    <a href="carBmanu.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                  </div>
+                                            </div>
+                                      </section>
+                                        
+
             <!-- Footer -->
             <footer>
               <div class="container" >
