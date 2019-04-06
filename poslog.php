@@ -58,7 +58,18 @@
         <!-- Header  -->
         <header class="masthead" >
               <div class="intro-text">
-                <div class="form-group">      
+                <div class="form-group">
+                    <form>
+                      <div>
+                        <label for="mySearch">Didite o nome da agência:</label>
+                        <input type="search" id="mySearch" name="q"
+                        placeholder="Nome da Agência" required
+                        size="30" pattern="[A-z]{2}[0-9]{4}">
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <span class="validity"></span>
+                      </div>
+                    </form>
+
                   <div class="facareserva">
                     <div class="passo1">
                       <div class="row">
