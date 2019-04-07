@@ -44,9 +44,13 @@
                   <ul class="navbar-nav text-uppercase ml-auto">                
                     <li class="nav-item">
                       <!--https://forum.imasters.com.br/topic/466064-exibir-nome-do-usu%C3%A1rio-logado/    link para colocar nome na page-->
-                      <a class="nav-link js-scroll-trigger"><h1><strong></strong></h1></a>
+                      <a class="nav-link js-scroll-trigger"><h1><strong>
+         <?php/* echo $listar['nome'] */?></strong></h1></a>
                     </li>
 
+                  </ul>
+                  <ul>
+                    <a href="poslog.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                   </ul>
                 </div>
               </div>
@@ -73,7 +77,7 @@
                                           <section id="cate">
                                             <div class="row">
 
-                                                <div class="card" style="width: 19rem;">
+                                                <div class="card" style="width: 20rem;">
                                                     <img class="card-img-top img-fluid" src="./img/carluxo/porscheBoxter.jpg" >
                                                     <div class="card-body">
                                                       <h5 class="card-title text-center" >Categoria</h5>
@@ -84,7 +88,7 @@
                                                 
 
                                                 
-                                                  <div class="card" style="width: 19rem;">
+                                                  <div class="card" style="width: 20rem;">
                                                     <img class="card-img-top img-fluid" src="./img/intermediarios/hondaCivic.jpg" >
                                                     <div class="card-body">
                                                      <h5 class="card-title text-center"  >Categoria </h5>
@@ -96,7 +100,7 @@
                                                 
 
                                                 
-                                                  <div class="card" style="width: 19rem;">
+                                                  <div class="card" style="width: 20rem;">
                                                     <img class="card-img-top img-fluid" src="./img/intermediarios/jeep.jpg">
                                                     <div class="card-body">
                                                         <h5 class="card-title text-center"  >Categoria </h5>
@@ -108,7 +112,7 @@
                                                 
 
                                                 
-                                                  <div class="card" style="width: 19rem;">
+                                                  <div class="card" style="width: 20rem;">
                                                     <img class="card-img-top img-fluid" src="./img/carbasic/faituno.jpg" >
                                                     <div class="card-body">
                                                         <h5 class="card-title text-center"  >Categoria </h5>
@@ -120,7 +124,7 @@
                                                 
                                                 
 
-                                                  <div class="card" style="width: 19rem;">
+                                                  <div class="card" style="width: 20rem;">
                                                     <img class="card-img-top img-fluid" src="./img/carbasic/fordka.jpeg" >
                                                     <div class="card-body">
                                                         <h5 class="card-title text-center"  >Categoria </h5>
