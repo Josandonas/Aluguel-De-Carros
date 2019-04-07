@@ -42,7 +42,7 @@ class ClienteController extends Controller
         $cliente->senha = $request->senha;
         $cliente->save();
 
-        return redirect()->view('index')->with('message', 'Cadastro feito com sucesso!');
+        return redirect('/posLogin')->with('message', 'Cadastro feito com sucesso!');
     }
 
     /**

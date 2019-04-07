@@ -19,5 +19,9 @@ Route::get('/index', function(){
     return view('index');
 });
 
+Route::get('/posLogin', function(){
+    return view('posLogin');
+});
+
 Route::post('/cadastro/{id}','ClienteController@store');
 
