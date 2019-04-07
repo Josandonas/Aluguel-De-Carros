@@ -41,6 +41,8 @@ class ClienteController extends Controller
         $cliente->email = $request->email;
         $cliente->senha = $request->senha;
         $cliente->save();
+
+        return redirect()->view('index')->with('message', 'Cadastro feito com sucesso!');
     }
 
     /**
