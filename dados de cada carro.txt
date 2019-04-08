@@ -1,0 +1,134 @@
+Carros de Luxo:
+Diária é equivalente: R$ 200,00
+
+id=1
+PORSCHE 718
+Potência: 300 - 365 HP
+Aceleração: De 0 a 100 km/h em 5,1 segundos
+Dimensões: 4,379 Metros Largura x 1.28 Metros Altura
+Motor: 2,0 l 4 cilindros, 2,5 l 4 cilindros
+
+id=2
+Lambhorghini URUS
+Potência: 300 - 365 HP
+Aceleração: De 0 a 350 km/h em 3,6 segundos
+Dimensões: 5,12 metros Largura x  3,3 metros Altura
+Motor: 650 Cavalos
+
+id=3
+Maybach Landaulet
+Potência: 612 cavalos
+Aceleração: De 0 a 250 km/h em 5,1 segundos
+Dimensões: 6 Metros de Comprimento x 2 metros de Altura
+Motor: 6.0 litros V12 (612 cv)
+
+
+Carros Intermediários Automáticos
+Diária é equivalente: R$ 150,00
+
+id=4
+Jeep Compass 2.0 Sport 2019
+Com ar-condicionado
+Potência: 166 - 159 Cavalos
+Aceleração: De 0 a 100 km/h em 10,6 segundos
+Dimensões: 1.81 Metros Largura x  1.63 metros Altura
+Motor: 2.0 Tigershark Flex 
+
+id=5
+Honda Civic
+Com ar-condicionado
+Potência: 173 cavvalos 
+Aceleração: De 0 a 150 km/h em 12,4 segundos
+Dimensões: 1,80 metros Largura x  1,43 metros Altura
+Motor: 1.5 turbo
+
+id=6
+Ford Ranger
+Com ar-condicionado
+Potência: 200 cavalos
+Aceleração: De 0 a 200 km/h em 14,1 segundos
+Dimensões: 4 Metros de Comprimento x 2,0 metros de Altura
+Motor: 2.2 Durator
+
+Carros Intermediários Manuais
+Diária é equivalente: R$ 150,00
+
+id=7
+Jeep Compass 2.0 Sport 2019
+Sem ar-condicionado
+Potência: 166 - 159 Cavalos
+Aceleração: De 0 a 100 km/h em 10,6 segundos
+Dimensões: 1.81 Metros Largura x  1.63 metros Altura
+Motor: 2.0 Tigershark Flex 
+
+id=8
+Honda Civic
+Sem ar-condicionado
+Potência: 173 cavvalos 
+Aceleração: De 0 a 150 km/h em 12,4 segundos
+Dimensões: 1,80 metros Largura x  1,43 metros Altura
+Motor: 1.5 turbo
+
+id=9
+Ford Ranger
+Sem ar-condicionado
+Potência: 200 cavalos
+Aceleração: De 0 a 200 km/h em 14,1 segundos
+Dimensões: 4 Metros de Comprimento x 2,0 metros de Altura
+Motor: 2.2 Durator
+
+Carros Básicos Automaticos
+Diária é equivalente: R$ 35,00
+
+id=10
+Fiat Uno Drive 1.0 Firefly (Flex) 2018
+Com Ar-condicionado
+Potência: 77 Cavalos
+Aceleração: De 0 a 100 km/h em 12,5 segundos
+Dimensões: 1.636 Metros Largura x  1.480 metros Altura
+Motor: 3 cilindros Flex 
+
+id=11
+Ford Ka 1.0 TI-VCT SE 12V FLEX
+Com Ar-condicionado
+Potência: 80 - 6500 cavalos
+Aceleração: De 0 a 166 km/h em 13,6 segundos
+Dimensões: 1,911 metros Largura x  1,525 metros Altura
+Motor: 1.0 Cilindrada
+
+id=12
+Toyota Yaris 
+Com Ar-condicionado
+Potência: 101 cavalos
+Aceleração: De 0 a 200 km/h em 12,1 segundos
+Dimensões: 1.730 Metros de Largura x 1.490 metros de Altura
+Motor: 1.5 Cilindradas
+
+
+
+Carros Básicos Manuais
+Diária é equivalente: R$ 35,00
+
+id=13
+Fiat Uno Drive 1.0 Firefly (Flex) 2018
+Sem Ar-condicionado
+Potência: 77 Cavalos
+Aceleração: De 0 a 100 km/h em 12,5 segundos
+Dimensões: 1.636 Metros Largura x  1.480 metros Altura
+Motor: 3 cilindros Flex 
+
+id=14
+Ford Ka 1.0 TI-VCT SE 12V FLEX
+Sem Ar-condicionado
+Potência: 80 - 6500 cavalos
+Aceleração: De 0 a 166 km/h em 13,6 segundos
+Dimensões: 1,911 metros Largura x  1,525 metros Altura
+Motor: 1.0 Cilindrada
+
+id=15
+Toyota Yaris 
+Sem Ar-condicionado
+Potência: 101 cavalos
+Aceleração: De 0 a 200 km/h em 12,1 segundos
+Dimensões: 1.730 Metros de Largura x 1.490 metros de Altura
+Motor: 1.5 Cilindradas
