@@ -17,6 +17,7 @@ class TabelaCliente extends Migration
             $table->char('cpf',14);
             $table->string('nome');
             $table->string('email');
+            $table->string('telefone');
             $table->string('senha');
             $table->primary('cpf');
             $table->timestamps();

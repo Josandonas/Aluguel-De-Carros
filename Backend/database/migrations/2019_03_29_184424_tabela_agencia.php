@@ -17,6 +17,8 @@ class TabelaAgencia extends Migration
             $table->char('cnpj',14);
             $table->string('razao_social');
             $table->integer('endereco');
+            $table->string('telefone');
+            $table->string('email');
             $table->primary('cnpj');
             $table->foreign('endereco')->references('id')->on('enderecos');
             $table->timestamps();

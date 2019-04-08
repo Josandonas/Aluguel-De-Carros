@@ -17,12 +17,15 @@ class TabelaCarro extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('nome');
             $table->string('modelo');
-            $table->integer('caracteristica');
+            $table->string('potencia');
+            $table->string('aceleracao');
+            $table->string('dimensao');
+            $table->string('motor');
+            $table->integer('categoria');
             $table->char('agencia', 14);
-            $table->float('valor');
             $table->tinyInteger('disponivel');
             $table->longText('imagem');
-            $table->foreign('caracteristica')->references('id')->on('caracteristicas');
+            $table->foreign('categoria')->references('id')->on('categorias');
             $table->foreign('agencia')->references('cnpj')->on('agencia');
             $table->timestamps();
         });
