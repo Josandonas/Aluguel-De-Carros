@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Cliente;
 
 class ClienteController extends Controller
 {
@@ -35,11 +36,12 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = new Cliente;
-        $cliente->nome = $request->nome;
-        $cliente->cpf = $request->cpf;
-        $cliente->email = $request->email;
-        $cliente->senha = $request->senha;
+        $cliente = new Cliente();
+        $cliente->nome = $request->input('nome');
+        $cliente->cpf = $request->input('cpf');
+        $cliente->email = $request->input('email');
+        $cliente->telefone = $request->input('telefone');
+        $cliente->senha = $request->input('senha');
         $cliente->save();
 
         return redirect('/posLogin')->with('message', 'Cadastro feito com sucesso!');

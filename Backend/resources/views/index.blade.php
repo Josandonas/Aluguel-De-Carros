@@ -228,7 +228,8 @@
             </div>
             <!-- body -->
             <div class="modal-body">
-                <form method="POST" action="/cadastro/{id}">
+                <form method="POST" action="/cadastro">
+                @csrf
                     <div class="form-group">
                         <label for="inputName">Nome:</label> 
                         <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo" ng-model="cadastroNome" required="autofocus">  
@@ -244,7 +245,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
+                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
                     </div>
 
                     <div class="form-group">
@@ -255,7 +256,7 @@
             </div>
             <!-- footer -->
             <div class="modal-footer">
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+                    <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Criar Cadastro</button>
             </div>
             <!-- end footer -->
 

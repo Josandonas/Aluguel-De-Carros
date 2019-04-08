@@ -19,5 +19,8 @@ Route::get('/posLogin', function(){
     return view('posLogin');
 });
 
-Route::post('/cadastro/{id}','ClienteController@store');
+Route::post('/cadastro','ClienteController@store');
 
+Route::get('/controlegaragem',function(){
+    return view('controlegaragem');
+});

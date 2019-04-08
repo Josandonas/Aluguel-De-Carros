@@ -78,10 +78,6 @@
                         <label for="inputName">Endereço:</label> 
                         <input type="text" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
                     </div>
-					
-					     <div class="form-group">
-                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)">
-                    </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
