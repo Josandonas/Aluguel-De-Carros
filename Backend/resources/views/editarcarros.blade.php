@@ -34,7 +34,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="index.html">Voltar para Home</a>
+      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -66,80 +66,35 @@
       
 
 
-<?php
-foreach ( $tabelas as $tabela ) : // falta chamar a tabela certa do banco
-	?>
-<form method="post" action="" class="container formulario-carro">
-
-	<!-- Dados de acesso -->
-		Dados do carro
-
-		<div class="form-group">
-			<label>Nome do anuncio: </label> <input name='nome' type='nome' id="nome"
-				placeholder='Nome do anuncio' class='form-control'
-				value="<?= $dado['nome']?>" maxlength="50" />
-		</div>
-
-		<!-- Informações do veiculo -->
-		<fieldset>
-			<legend>Informações do veiculo</legend>
-
-			<div class="form-group">
-				<input class="form-control" type="text" name="marca" id="marca"
-					placeholder="MARCA" value="<?= $dado['marca']?>" required />
-			</div>
-
-			<div class="form-group">
-				<input type="text" name="modelo" class="form-control"
-					placeholder="modelo" maxlength="50" value="<?= $dado['modelo']?>" />
-			</div>
-
-			<div class="form-group">
-				<input type="text" name="cor" class="form-control"
-					placeholder="cor" maxlength="30"
-					value="<?= $dado['cor']?>" />
-			</div>
-
-			<div class="form-group">
-				<input type="text" name="placa" class="form-control"
-					placeholder="placa do carro" maxlength="7"
-					value="<?= $dado['placa']?>" />
-			</div>
-
-			<div class="form-group">
-				<input type="text" name="ano" class="form-control"
-					placeholder="ano de fabricacao" maxlength="4"
-					value="<?= $dado['ano']?>" />
-			</div>
-			
-			<div class="form-group">
-				<input type="text" name="combustivel" class="form-control"
-					placeholder="combustivel" maxlength="30"
-					value="<?= $dado['combustivel']?>" />
-			</div>
-			
-			<div class="form-group">
-				<input type="text" name="valor" class="form-control"
-					placeholder="valor da diaria" maxlength="10"
-					value="<?= $dado['valor']?>" />
-			</div>
-			</div>
-		</fieldset>
-
-		<fieldset>
-			<legend>Salvar alterações</legend>
-
-			<div class="form-group">
-				<button name="formClientes.php" type="submit"
-					class="btn btn-primary">Salvar</button>
-				<a href="dashboard.php" type="submit" class="btn btn-default">Cancelar</a>
-			</div>
-		</fieldset>
-
-</form>
 
 
-<?php endforeach ?>
+
+
+<div class="card">
+    <div class="card-header">
+        Cadastro de carros
+    </div>
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Potência</th>
+                <th>Aceleração</th>
+                <th>Categoria</th>
+                <th>Ar-condicionado</th>
+                <th>Motor</th>
+                <th>Dimensões</th>                
+                
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="card-footer">
+        <a href= "cadastrocarro.blade.php" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
+    </div>
+</div>
 
 
 
@@ -147,7 +102,20 @@ foreach ( $tabelas as $tabela ) : // falta chamar a tabela certa do banco
 
 
 
-<a class="navbar-brand" href="controlegaragem.html">Voltar</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="navbar-brand" href="controlegaragem.blade.php">Voltar</a>
 
   <!-- Footer -->
   <footer>
