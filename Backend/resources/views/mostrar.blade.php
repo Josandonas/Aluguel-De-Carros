@@ -34,7 +34,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="index.html">Voltar para Home</a>
+      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -123,7 +123,7 @@
               </a>
             </div>
         </div>
-        <a href="mostrar.html"><button type="button" class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button></a>
+        <a href="mostrar.blade.php"><button type="button" class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button></a>
   </section>
 
 
@@ -173,7 +173,7 @@
               </a>
             </div>
         </div>
-        <a href="mostrar.html"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
+        <a href="mostrar.blade.php"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
   </section>
 
  <section id="luxo" class="background-color">
@@ -223,7 +223,7 @@
               </a>
             </div>
         </div>
-        <a href="mostrar.html"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
+        <a href="mostrar.blade.php"> <button type="button"  class="btn btn-info btn-block btn-xl text-uppercase js-scroll-trigger"> Voltar ao Topo da Página</button> </a>
   </section>
 
 

@@ -50,7 +50,7 @@
 
                     </ul>
                     <ul>
-                      <a href="poslog.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
+                      <a href="posLogin.blade.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                     </ul>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
                                                         <h5 class="card-title text-center" >Categoria</h5>
                                                           <h5 class="card-title text-center" >Luxo</h5>
                                                       </div>
-                                                      <a href="carsluxo.php"><button type="button" class="btn btn-primary btn-block" >Selecionar Categoria</button></a>
+                                                      <a href="carsluxo.blade.php"><button type="button" class="btn btn-primary btn-block" >Selecionar Categoria</button></a>
                                                   </div>
                                                   
 
@@ -95,7 +95,7 @@
                                                           <h5 class="card-title text-center"  >Intermediarios(Automático)</h5>
                                                           <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carIauto.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="carIauto.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                                   
 
@@ -107,7 +107,7 @@
                                                           <h5 class="card-title text-center"  >Intermediarios(Manual)</h5>
                                                           <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carImanu.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="carImanu.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                                   
 
@@ -119,7 +119,7 @@
                                                           <h5 class="card-title text-center"  >Básicos(Automático)</h5>
                                                           <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carBauto.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="carBauto.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                                   
                                                   
@@ -131,7 +131,7 @@
                                                           <h5 class="card-title text-center"  >Básicos(Manual)</h5>
                                                           <h5 class="card-title text-center"  >Sem Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carBmanu.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="carBmanu.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                               </div>
                                         </section>

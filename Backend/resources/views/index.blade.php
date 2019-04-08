@@ -95,11 +95,11 @@
           <p class="text-muted"> Você não paga pela depreciação inicial sofrida pelo carro zero quilômetro. Os nossos carros têm cara de zero quilômetro e preço de seminovo.</p>
         </div>
         <div class="col-md-4">
-         <a href="mostrar.html"><span class="fa-stack fa-4x">
+         <a href="mostrar.blade.php"><span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span></a> 
-          <a href="mostrar.html"><h4 class="service-heading" >Ver Modelos</h4></a>
+          <a href="mostrar.blade.php"><h4 class="service-heading" >Ver Modelos</h4></a>
           <p class="text-muted">Você pode financiar com as melhores taxas do mercado, além de pagar a entrada em parcelas no seu cartão de crédito.</p>
         </div>
         <div class="col-md-4">
