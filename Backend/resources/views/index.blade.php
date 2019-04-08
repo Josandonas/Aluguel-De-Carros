@@ -228,19 +228,19 @@
             </div>
             <!-- body -->
             <div class="modal-body">
-                <form>
+                <form method="POST" action="/cadastro/{id}">
                     <div class="form-group">
                         <label for="inputName">Nome:</label> 
-                        <input type="text" class="form-control" id="nome" placeholder="Nome Completo" ng-model="cadastroNome" required="autofocus">  
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo" ng-model="cadastroNome" required="autofocus">  
                     </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CPF:</label> 
-                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" maxlength="14"  OnKeyPress="formatar('###.###.###-##', this)" required="autofocus">
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14"  OnKeyPress="formatar('###.###.###-##', this)" required="autofocus">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputEmail">Email:</label> <input type="email" class="form-control" id="email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
+                        <label for="inputEmail">Email:</label> <input type="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
                     </div>
 
                     <div class="form-group">
@@ -249,7 +249,7 @@
 
                     <div class="form-group">
                         <label for="inputSenha">Senha:</label> 
-                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" ng-model="cadastroSenha" required="autofocus">
+                        <input type="password" class="form-control" id="inputSenha" name="senha" placeholder="Senha" ng-model="cadastroSenha" required="autofocus">
                     </div>
                 </form>
             </div>
