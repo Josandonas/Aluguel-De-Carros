@@ -65,8 +65,31 @@
         <div class="intro-heading text-uppercase">Editar Garagem</div>
       
 
+<div class="card">
+    <div class="card-header">
+        Editar garagem
+    </div>
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>CNPJ</th>
+                           
+                
+            </tr>
+        </thead>
+        <tbody>
 
-<a class="navbar-brand" href="controlegaragem.html">Voltar</a>
+        </tbody>
+    </table>
+    <div class="card-footer">
+        <a href= "cadastrogaragem.blade.php" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
+    </div>
+</div>
+
+<a class="navbar-brand" href="controlegaragem.blade.php">Voltar</a>
 
   <!-- Footer -->
   <footer>
