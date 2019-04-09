@@ -68,30 +68,56 @@
 
 <!-- body -->
             <div class="modal-body">
-                <form>
+                <form method="POST" action="/garagem/cadastro/">
                     <div class="form-group">
                         <label for="inputName">Nome da Garagem:</label> 
-                        <input type="text" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
+                        <input type="text" name="nome" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
                     </div>
 					
-					<div class="form-group">
-                        <label for="inputName">Endereço:</label> 
-                        <input type="text" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+					          <div class="form-group">
+                        <label for="inputName">Cidade:</label> 
+                        <input type="text" name="cidade" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Estado:</label> 
+                        <input type="text" name="estado" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Rua:</label> 
+                        <input type="text" name="rua" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Numero:</label> 
+                        <input type="text" name="numero" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">CEP:</label> 
+                        <input type="text" name="cep" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label> <input type="email" name="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
                     </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                    </div>
+
+                    <div class="modal-footer">
+			                  <a href="controlegaragem.blade.php"> Já possui uma garagem?</a>
+                        <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
                     </div>                                 
                 </form>
             </div>
-
-            <!-- footer -->
-            <div class="modal-footer">
-			  <a href="controlegaragem.blade.php"> Já possui uma garagem?</a>
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
-            </div>
-            <!-- end footer -->
 
             <!-- footer -->
             <div class="modal-footer">

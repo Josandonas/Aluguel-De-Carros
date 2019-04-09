@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Carro;
 
 class CarrosController extends Controller
 {
@@ -13,7 +14,7 @@ class CarrosController extends Controller
      */
     public function index()
     {
-        //
+        return view('editarcarros');
     }
 
     /**
@@ -23,7 +24,7 @@ class CarrosController extends Controller
      */
     public function create()
     {
-        //
+        return view('cadastrocarro');
     }
 
     /**
@@ -34,18 +35,20 @@ class CarrosController extends Controller
      */
     public function store(Request $request)
     {
-        $carro = new Carros;
-        $carro->nome = $request->nome;
-        $carro->modelo = $request->modelo;
-        $carro->caracteristica = $request->caracteristica;
-        $carro->agencia = $request->agencia;
-        $carro->valor = $request->valor;
-        $carro->disponivel = $request->disponivel;
+        $carro = new Carro();
+        $carro->nome = $request->input('nome');
+        $carro->modelo = $request->input('modelo');
+        $carro->potencia = $request->input('potencia');
+        $carro->aceleracao = $request->input('aceleracao');
+        $carro->categoria = $request->input('categoria');
+        $carro->motor = $request->input('motor');
+        $carro->dimensao = $request->input('dimensao');
+        $carro->agencia = $request->input('agencia');
+        $carro->disponivel = $request->input('disponivel');
         $carro->imagem = $request->imagem; 
-        $carro->categoria = $request->categoria;
         $carro->save();
 
-
+        return redirect('/garagem');
     }
 
     /**

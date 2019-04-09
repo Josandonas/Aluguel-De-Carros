@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
           <div class="container">
 
-            <a class="navbar-brand" href="index.blade.php">Sair</a>
+            <a class="navbar-brand" href="/">Sair</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               Menu
               <i class="fas fa-bars"></i>
@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav text-uppercase ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro de Garagem</a>
+                    <a href="/garagem/cadastro" class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro de Garagem</a>
                   </li>
                 <li class="nav-item">
                   <!--https://forum.imasters.com.br/topic/466064-exibir-nome-do-usu%C3%A1rio-logado/    link para colocar nome na page-->

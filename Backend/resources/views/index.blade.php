@@ -95,11 +95,11 @@
           <p class="text-muted"> Você não paga pela depreciação inicial sofrida pelo carro zero quilômetro. Os nossos carros têm cara de zero quilômetro e preço de seminovo.</p>
         </div>
         <div class="col-md-4">
-         <a href="mostrar.blade.php"><span class="fa-stack fa-4x">
+         <a href="/mostrar"><span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span></a> 
-          <a href="mostrar.blade.php"><h4 class="service-heading" >Ver Modelos</h4></a>
+          <a href="/mostrar"><h4 class="service-heading" >Ver Modelos</h4></a>
           <p class="text-muted">Você pode financiar com as melhores taxas do mercado, além de pagar a entrada em parcelas no seu cartão de crédito.</p>
         </div>
         <div class="col-md-4">
@@ -110,7 +110,7 @@
           <i class="fa fa-cog fa-spin fa-8x fa-fw" aria-hidden="true"></i>
           <span class="sr-only">Saving. Hang tight!</span>
     
-           <a href="controlegaragem.blade.php"><h4 class="service-heading">Controle de garagem</h4></a>
+           <a href="/garagem"><h4 class="service-heading">Controle de garagem</h4></a>
           <p class="text-muted">Edite e Controle sua garagem.</p>
         </div>
       </div>
@@ -252,13 +252,12 @@
                         <label for="inputSenha">Senha:</label> 
                         <input type="password" class="form-control" id="inputSenha" name="senha" placeholder="Senha" ng-model="cadastroSenha" required="autofocus">
                     </div>
+
+                    <div class="modal-footer">
+                          <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Criar Cadastro</button>
+                     </div>
                 </form>
             </div>
-            <!-- footer -->
-            <div class="modal-footer">
-                    <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Criar Cadastro</button>
-            </div>
-            <!-- end footer -->
 
             <!-- footer -->
             <div class="modal-footer">

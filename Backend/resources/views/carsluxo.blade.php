@@ -43,7 +43,7 @@
                     </li>
                       </ul>
                       <ul>
-                         <a href="escolhacar.blade.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
+                         <a href="/mostrar"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                       </ul>
                     </div>
                   </div>

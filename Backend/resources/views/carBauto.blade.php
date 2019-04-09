@@ -31,7 +31,7 @@
             <body id="page-top"  src="../img/categoria.jpg">
                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <div class="container">
-                      <a class="navbar-brand" href="index.blade.php"><h3>Sair</h3></a>
+                      <a class="navbar-brand" href="/"><h3>Sair</h3></a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -44,7 +44,7 @@
                       </li>
                         </ul>
                         <ul>
-                           <a href="escolhacar.blade.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
+                           <a href="/mostrar"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                         </ul>
                       </div>
                     </div>

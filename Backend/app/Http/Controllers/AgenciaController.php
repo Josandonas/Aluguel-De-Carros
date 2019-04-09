@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Agencia;
 
 class AgenciaController extends Controller
 {
@@ -13,7 +14,7 @@ class AgenciaController extends Controller
      */
     public function index()
     {
-        return view('/agencias');
+        return view('editargaragem');
     }
 
     /**
@@ -23,7 +24,7 @@ class AgenciaController extends Controller
      */
     public function create()
     {
-        return view('criarAgencia');
+        return view('cadastrogaragem');
     }
 
     /**
@@ -38,9 +39,12 @@ class AgenciaController extends Controller
 
         $gar->cnpj = $request->input('cnpj');
         $gar->razao_social = $request->input('razao_social');
-        $gar->endereco = $gar->endereco($request->input('cep'));
+        $gar->telefone = $request->input('telefone');
+        $gar->email = $request->input('email');
+        $gar->endereco = $request->input('cep');
 
         $gar->save();
+        return redirect('controlegaragem');
     }
 
     /**

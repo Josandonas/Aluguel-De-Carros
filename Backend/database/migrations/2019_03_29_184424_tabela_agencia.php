@@ -16,11 +16,14 @@ class TabelaAgencia extends Migration
         Schema::create('agencia', function (Blueprint $table) {
             $table->char('cnpj',14);
             $table->string('razao_social');
-            $table->integer('endereco');
             $table->string('telefone');
             $table->string('email');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('rua');
+            $table->string('numero');
+            $table->string('cep');
             $table->primary('cnpj');
-            $table->foreign('endereco')->references('id')->on('enderecos');
             $table->timestamps();
         });
     }

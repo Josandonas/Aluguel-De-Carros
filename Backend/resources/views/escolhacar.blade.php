@@ -34,7 +34,7 @@
               <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <div class="container">
 
-                  <a class="navbar-brand" href="index.html">Sair</a>
+                  <a class="navbar-brand" href="/">Sair</a>
                   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -50,7 +50,7 @@
 
                     </ul>
                     <ul>
-                      <a href="posLogin.blade.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
+                      <a href="/mostrar"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                     </ul>
                   </div>
                 </div>
