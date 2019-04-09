@@ -49,75 +49,53 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger"  data-toggle="modal" data-target="#exampleModal">login </a>
           </li> 
-		     
+
 
         </ul>
       </div>
     </div>
   </nav>
   <!-- Header -->
-  
+
   <header class="masthead" >
     <div class="container">
-      
+
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase">Cadastro de garagem</div>
-      
-            
+
+
 
 <!-- body -->
             <div class="modal-body">
-                <form method="POST" action="/garagem/cadastro/">
+                <form>
                     <div class="form-group">
                         <label for="inputName">Nome da Garagem:</label> 
-                        <input type="text" name="nome" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
+                        <input type="text" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
+                    </div>
+
+					<div class="form-group">
+                        <label for="inputName">Endereço:</label> 
+                        <input type="text" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
                     </div>
 					
-					          <div class="form-group">
-                        <label for="inputName">Cidade:</label> 
-                        <input type="text" name="cidade" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputName">Estado:</label> 
-                        <input type="text" name="estado" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputName">Rua:</label> 
-                        <input type="text" name="rua" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputName">Numero:</label> 
-                        <input type="text" name="numero" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputName">CEP:</label> 
-                        <input type="text" name="cep" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputEmail">Email:</label> <input type="email" name="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
+					     <div class="form-group">
+                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)">
                     </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
-                    </div>
-
-                    <div class="modal-footer">
-			                  <a href="controlegaragem.blade.php"> Já possui uma garagem?</a>
-                        <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+                        <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
                     </div>                                 
                 </form>
             </div>
+
+            <!-- footer -->
+            <div class="modal-footer">
+			  <a href="controlegaragem.blade.php"> Já possui uma garagem?</a>
+                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+            </div>
+            <!-- end footer -->
 
             <!-- footer -->
             <div class="modal-footer">
@@ -129,10 +107,10 @@
 </div>
 <!--  end-Modal -->
       </div>
-      
+
     </div>
   </header>
-  
+
 
   <!-- Footer -->
   <footer>
@@ -152,7 +130,7 @@
       <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel" >Login</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-        
+
       </div>
       <div class="modal-body">
         <!-- body -->
