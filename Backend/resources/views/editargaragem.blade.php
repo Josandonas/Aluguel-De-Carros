@@ -49,21 +49,21 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger"  data-toggle="modal" data-target="#exampleModal">login </a>
           </li> 
-		     
+
 
         </ul>
       </div>
     </div>
   </nav>
   <!-- Header -->
-  
+
   <header class="masthead" >
     <div class="container">
-      
+
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase">Editar Garagem</div>
-      
+
 
 
 <a class="navbar-brand" href="controlegaragem.html">Voltar</a>
@@ -86,7 +86,7 @@
       <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel" >Login</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-        
+
       </div>
       <div class="modal-body">
         <!-- body -->
