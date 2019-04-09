@@ -83,7 +83,7 @@
                                                         <h5 class="card-title text-center" >Categoria</h5>
                                                           <h5 class="card-title text-center" >Luxo</h5>
                                                       </div>
-                                                      <a href="carsluxo.blade.php"><button type="button" class="btn btn-primary btn-block" >Selecionar Categoria</button></a>
+                                                      <a href="/luxo"><button type="button" class="btn btn-primary btn-block" >Selecionar Categoria</button></a>
                                                   </div>
                                                   
 
@@ -95,7 +95,7 @@
                                                           <h5 class="card-title text-center"  >Intermediarios(Automático)</h5>
                                                           <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carIauto.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="/intermediario"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                                   
 
@@ -119,7 +119,7 @@
                                                           <h5 class="card-title text-center"  >Básicos(Automático)</h5>
                                                           <h5 class="card-title text-center"  >Com Ar-condicionado</h5>
                                                       </div>
-                                                      <a href="carBauto.blade.php"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
+                                                      <a href="/basico"><button type="button" class="btn btn-primary btn-block">Selecionar Categoria</button></a>
                                                     </div>
                                                   
                                                   

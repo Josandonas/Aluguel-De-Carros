@@ -35,7 +35,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
+      <a class="navbar-brand" href="/">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -73,60 +73,49 @@
 
 		<legend>Dados para Incluir Veículo</legend>		
 
-		<div class="form-group">
-         <label>Marca: </label>
-			<select name="marca" id="marca" title="Marca" class="form-control" required>
-				<option selected disabled>Selecione a Marca</option>
-				<?php foreach ($marcas as $marca) :?>
-					<option value="<?= $marca['id']?>"><?= $marca['nome']?></option>
-				<?php endforeach ?>
-			</select>
-    	</div>
+		<div class="form-group">          
+		  <label>Nome: </label>
+			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" required>
+    </div>
+
+    <div class="form-group">          
+		  <label>Modelo: </label>
+			<input type="text" name="modelo" class="form-control" placeholder="Digite aqui o modelo do carro" required>
+    </div>
 
 		<div class="form-group">          
 		  <label>Potência: </label>
-			<input type="text" name="Potencia" class="form-control" placeholder="Digite aqui a Potência" required>
-        </div>
+			<input type="text" name="potencia" class="form-control" placeholder="Digite aqui a Potência" required>
+    </div>
 
 		<div class="form-group">
           <label>Aceleração: </label>
-			<input type="text" name="Aceleração" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" required>
+			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" required>
         </div>
 
 		<div class="form-group">
          <label>Categoria: </label>
 			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
 				<option selected disabled>Selecione a categoria</option>	
-				<option value="luxo">Carro de Luxo</option>
-				<option value="intermediario">Carro intermediario</option>
-				<option value="Basico">Basico</option>
+				<option value="5">Carro de Luxo</option>
+				<option value="4">Carro intermediario Automático</option>
+        <option value="3">Carro intermediario Manual</option>
+				<option value="2">Basico Automático</option>
+        <option value="1">Basico Manual</option>
 
-			</select>
-    	</div>
-
-		<div class="form-group">
-         <label>Ar-condicionado: </label>
-			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
-				<option selected disabled>Selecione uma opção de Ar-Condicionado</option>	
-				<option value="semar" >Sem Ar-Condicionado</option>
-				<option value="comar" >Com Ar-Condicionado</option>
 			</select>
     	</div>
 
 		<div class="form-group">
           <label>Motor: </label>
-			<input type="text" name="Motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" required>
+			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" required>
         </div>
 
 	<center>
 		<div class="form-group">
 		<label>Dimensões: </label>
 				<div class="input-group col-md-3">
-					<input type="text" name="Dimensões" id="Dimensões" class="form-control" placeholder="Digite aqui a Largura" required>
-				</div>
-
-				<div class="input-group col-md-3">
-					<input type="text" name="Dimensões" id="Dimensões" class="form-control" placeholder="Digite aqui a Altura " required>
+					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" required>
 				</div>
 			</div>	
 
@@ -135,12 +124,14 @@
 	</center>
 
 	<center>
-		<label>Preço Diário: </label>		
+		<label>Confirme a agência: </label>		
 			<div class="input-group col-md-2">
-				<span class="input-group-addon">R$</span>
-				<input type="text" name="preco" id="preco" class="form-control" required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
+				<span class="input-group-addon"></span>
+				<input type="text" name="agencia" id="agencia" class="form-control" required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
 			</div>
 		</br>
+
+    <input  type="hidden" name="disponivel" value=1>
 
 		<legend>Concluir Cadastro</legend>
       <div class="form-group">
@@ -173,7 +164,7 @@
 
 
 
-<a class="navbar-brand" href="controlegaragem.blade.php">Voltar</a>
+<a class="navbar-brand" href="/garagem">Voltar</a>
 
   <!-- Footer -->
   <footer>

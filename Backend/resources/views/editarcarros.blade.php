@@ -34,7 +34,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
+      <a class="navbar-brand" href="/">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -90,14 +90,14 @@
 	
 	
     <div class="card-footer">
-        <a href= "cadastrocarro.blade.php" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
+        <a href= "/garagem/carro/cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
     </div>
 </div>
 
 
 
 
-<a class="navbar-brand" href="controlegaragem.blade.php">Voltar</a>
+<a class="navbar-brand" href="/garagem">Voltar</a>
 
   <!-- Footer -->
   <footer>

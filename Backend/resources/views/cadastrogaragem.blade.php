@@ -33,7 +33,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
+      <a class="navbar-brand" href="/">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -70,28 +70,55 @@
                 <form>
                     <div class="form-group">
                         <label for="inputName">Nome da Garagem:</label> 
-                        <input type="text" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
-                    </div>
-
-					<div class="form-group">
-                        <label for="inputName">Endereço:</label> 
-                        <input type="text" class="form-control" id="enredeco" placeholder="endereco" ng-model="endereco">
-                    </div>
-					
-					     <div class="form-group">
-                        <label for="inputTel" >Telefone:</label> <input class="form-control" id="telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)">
+                        <input type="text" name="razao_social" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
                     </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
-                    </div>                                 
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label> 
+                        <input type="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
+                    </div>
+
+	          				<div class="form-group">
+                        <label for="inputTel" >Telefone:</label> 
+                        <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Cidade:</label> 
+                        <input type="text" name="cidade" class="form-control" id="Cidade" placeholder="Nome da Cidade" ng-model="Cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Estado:</label> 
+                        <input type="text" name="estado" class="form-control" id="Estado" placeholder="Nome do Estado" ng-model="Estado">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Rua:</label> 
+                        <input type="text" name="rua" class="form-control" id="Rua" placeholder="Nome da Rua" ng-model="Rua">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Número:</label> 
+                        <input type="text" name="numero" class="form-control" id="numero" placeholder="Numero" ng-model="Numero">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">CEP:</label> 
+                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep">
+                    </div>
+					                           
                 </form>
             </div>
 
             <!-- footer -->
             <div class="modal-footer">
-			  <a href="controlegaragem.blade.php"> Já possui uma garagem?</a>
+			  <a href="/garagem"> Já possui uma garagem?</a>
                     <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
             </div>
             <!-- end footer -->
