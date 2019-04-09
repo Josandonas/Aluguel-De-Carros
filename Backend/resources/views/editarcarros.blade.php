@@ -73,15 +73,21 @@
     <table class="table table-hover table-striped table-bordered">
         <thead>
             <tr>
-                <th>Marca</th>
+                <th>Nome</th>
                 <th>Potência</th>
                 <th>Aceleração</th>
                 <th>Categoria</th>
-                <th>Ar-condicionado</th>
                 <th>Motor</th>
                 <th>Dimensões</th>                
-
             </tr>
+@foreach ($carros as $car)
+            <td>{{$car->nome}}</td>
+            <td>{{$car->potencia}}</td>
+            <td>{{$car->aceleracao}}</td>
+            <td>{{$car->categoria}}</td>
+            <td>{{$car->motor}}</td>
+            <td>{{$car->dimensao}}</td>
+@endforeach
         </thead>
         <tbody>
 

@@ -24,7 +24,7 @@ class TabelaCarro extends Migration
             $table->integer('categoria');
             $table->char('agencia', 14);
             $table->tinyInteger('disponivel');
-            $table->longText('imagem');
+            $table->longText('imagem')->nullable();
             $table->foreign('categoria')->references('id')->on('categorias');
             $table->foreign('agencia')->references('cnpj')->on('agencia');
             $table->timestamps();

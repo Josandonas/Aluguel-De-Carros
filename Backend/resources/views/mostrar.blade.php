@@ -62,9 +62,9 @@
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase">Veja</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/basico"> Modelos Básicos </a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/intermediario"> Modelos Intermediarios</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/luxo"> Modelos de Luxo</a>        
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#basicos"> Modelos Básicos </a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#intermediarios"> Modelos Intermediarios</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#luxo"> Modelos de Luxo</a>        
         <div class="intro-heading text-uppercase">Alugamos Diversos Modelos de Carros</div>
       </div>
       

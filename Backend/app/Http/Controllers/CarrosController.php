@@ -13,8 +13,10 @@ class CarrosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        return view('editarcarros');
+        $carros = Carro::all();
+        return view('editarcarros', compact('carros'));
     }
 
     /**
@@ -70,7 +72,7 @@ class CarrosController extends Controller
      */
     public function edit($id)
     {
-        //
+    //
     }
 
     /**
