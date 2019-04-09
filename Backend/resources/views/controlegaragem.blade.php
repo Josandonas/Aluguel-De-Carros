@@ -34,7 +34,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="/">Voltar para Home</a>
+      <a class="navbar-brand" href="index.blade.php">Voltar para Home</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -43,7 +43,7 @@
         <ul class="navbar-nav text-uppercase ml-auto">
 
          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"  href="/garagem/cadastro" >Cadastro Garagem</a>
+            <a class="nav-link js-scroll-trigger"  href="cadastrogaragem.blade.php" >Cadastro Garagem</a>
           </li>  
 
           <li class="nav-item">
@@ -55,22 +55,22 @@
     </div>
   </nav>
   <!-- Header -->
-  
+
   <header class="masthead" >
     <div class="container">
-      
+
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase"> Edite</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/carro/cadastro"> Cadastrar carro </a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/editar"> Editar dados garagem</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/carro/editar"> Editar dados Carros</a>        
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="cadastrocarro.blade.php"> Cadastrar carro </a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="editargaragem.blade.php"> Editar dados garagem</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="editarcarros.blade.php"> Editar dados Carros</a>        
 
       </div>
-      
+
     </div>
   </header>
-  
+
 
   <!-- Footer -->
   <footer>
@@ -90,7 +90,7 @@
       <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel" >Login</h5>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-        
+
       </div>
       <div class="modal-body">
         <!-- body -->
