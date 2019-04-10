@@ -42,9 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro</a>
-          </li>
+        
 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger"  data-toggle="modal" data-target="#exampleModal">login </a>
@@ -78,7 +76,10 @@
                 <th>Aceleração</th>
                 <th>Categoria</th>
                 <th>Motor</th>
-                <th>Dimensões</th>                
+                <th>Dimensões</th> 
+				<th>Editar</th>
+				<th>Remover</th>				
+							
             </tr>
 @foreach ($carros as $car)
             <td>{{$car->nome}}</td>
@@ -87,6 +88,12 @@
             <td>{{$car->categoria}}</td>
             <td>{{$car->motor}}</td>
             <td>{{$car->dimensao}}</td>
+			<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarcarros">
+  Editar
+</button>
+							<td><a href="#" button class="btn btn-danger">
+									<span class="glyphicon glyphicon-trash">Remover</span>
+								</button></td> 	
 @endforeach
         </thead>
         <tbody>
@@ -157,6 +164,103 @@
   </div>
 </div>
 <!--  end-Modal -->
+
+
+
+
+
+
+<!-- Modal -->
+
+  <div class="modal fade" id="editarcarros" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" >Cadastre-se</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+                <form>
+         <div class="form-group">          
+		  <label>Nome: </label>
+			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" required>
+    </div>
+
+    <div class="form-group">          
+		  <label>Modelo: </label>
+			<input type="text" name="modelo" class="form-control" placeholder="Digite aqui o modelo do carro" required>
+    </div>
+
+		<div class="form-group">          
+		  <label>Potência: </label>
+			<input type="text" name="potencia" class="form-control" placeholder="Digite aqui a Potência" required>
+    </div>
+
+		<div class="form-group">
+          <label>Aceleração: </label>
+			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" required>
+        </div>
+
+		<div class="form-group">
+         <label>Categoria: </label>
+			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
+				<option selected disabled>Selecione a categoria</option>	
+				<option value="5">Carro de Luxo</option>
+				<option value="4">Carro intermediario Automático</option>
+        <option value="3">Carro intermediario Manual</option>
+				<option value="2">Basico Automático</option>
+        <option value="1">Basico Manual</option>
+
+			</select>
+    	</div>
+
+		<div class="form-group">
+          <label>Motor: </label>
+			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" required>
+        </div>
+
+	<center>
+		<div class="form-group">
+		<label>Dimensões: </label>
+				<div class="input-group col-md-5">
+					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" required>
+				</div>
+			</div>	
+
+		</fieldset>
+
+	</center>
+
+	<center>
+		<label>valor: </label>		
+			<div class="input-group col-md-4">
+				<span class="input-group-addon"></span>
+				<input type="text" name="valor" id="valor" class="form-control" required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
+			</div>
+		</br>
+
+    <input  type="hidden" name="disponivel" value=1>
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+            </div>
+            <!-- end footer -->
+
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+</div>
+<!--  end-Modal -->
+
+
+
+
+
 
 
 
