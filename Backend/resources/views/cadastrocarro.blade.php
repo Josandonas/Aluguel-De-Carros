@@ -97,11 +97,11 @@
          <label>Categoria: </label>
 			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
 				<option selected disabled>Selecione a categoria</option>	
-				<option value="5">Carro de Luxo</option>
-				<option value="4">Carro intermediario Automático</option>
-        <option value="3">Carro intermediario Manual</option>
-				<option value="2">Basico Automático</option>
-        <option value="1">Basico Manual</option>
+				<option value="5">Carro de Luxo // Com Ar</option>
+				<option value="4">Carro intermediario Automático // Com Ar</option>
+        <option value="3">Carro intermediario Manual // Sem Ar</option>
+				<option value="2">Basico Automático// Com Ar</option>
+        <option value="1">Basico Manual// Sem ar</option>
 
 			</select>
     	</div>
