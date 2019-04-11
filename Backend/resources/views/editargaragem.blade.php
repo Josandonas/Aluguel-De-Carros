@@ -64,7 +64,52 @@
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase">Editar Garagem</div>
 
+<div class="card">
+    <div class="card-header">
+        Editar Garagem
+    </div>
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>EMAIL</th>
+                <th>TELEFONE</th>
+                <th>CIDADE</th>
+                <th>ESTADO</th> 
+				<th>RUA</th>
+				<th>NUMERO</th>		
+				<th>CEP</th>				
+							
+            </tr>
+@foreach ($agencia as $age)
+            <td>{{$age->nome}}</td>
+			<td>{{$age->CNPJ}}</td>
+			<td>{{$age->EMAIL}}</td>
+			<td>{{$age->TELEFONE}}</td>
+			<td>{{$age->CIDADE}}</td>
+			<td>{{$age->ESTADO}}</td>
+			<td>{{$age->RUA}}</td>
+			<td>{{$age->NUMERO}}</td>
+			<td>{{$age->CEP}}</td>
+			<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editargaragem">
+  Editar
+</button>
+							<td><a href="#" button class="btn btn-danger">
+									<span class="glyphicon glyphicon-trash">Remover</span>
+								</button></td> 	
+@endforeach
+        </thead>
+        <tbody>
 
+        </tbody>
+    </table>
+	
+	
+    <div class="card-footer">
+        <a href= "/garagem/carro/cadastro" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
+    </div>
+</div>
 
 <a class="navbar-brand" href="/garagem">Voltar</a>
 
@@ -78,6 +123,108 @@
       </div>
     </div>
   </footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="modal fade" id="editargaragem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" >Cadastre-se</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            </div>
+  
+  <!-- body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Nome da Garagem:</label> 
+                        <input type="text" name="razao_social" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputCpf">CNPJ:</label> 
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label> 
+                        <input type="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
+                    </div>
+
+	          				<div class="form-group">
+                        <label for="inputTel" >Telefone:</label> 
+                        <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Cidade:</label> 
+                        <input type="text" name="cidade" class="form-control" id="Cidade" placeholder="Nome da Cidade" ng-model="Cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Estado:</label> 
+                        <input type="text" name="estado" class="form-control" id="Estado" placeholder="Nome do Estado" ng-model="Estado">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Rua:</label> 
+                        <input type="text" name="rua" class="form-control" id="Rua" placeholder="Nome da Rua" ng-model="Rua">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">Número:</label> 
+                        <input type="text" name="numero" class="form-control" id="numero" placeholder="Numero" ng-model="Numero">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputName">CEP:</label> 
+                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep">
+                    </div>
+					                           
+                </form>
+            </div>
+
+            <!-- footer -->
+            <div class="modal-footer">
+			                      <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+            </div>
+            <!-- end footer -->
+
+            <!-- footer -->
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
+            </div>
+            <!-- end footer -->
+        </div>
+    </div>
+</div>
+<!--  end-Modal -->
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
