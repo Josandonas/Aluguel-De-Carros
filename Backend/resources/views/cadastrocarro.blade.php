@@ -105,6 +105,14 @@
 
 			</select>
     	</div>
+		
+
+		<div class="form-group">
+        <label for="imagem">Imagem:</label>
+        <input type="file" name="imagem"/>
+       </div>
+        
+    </form>
 
 		<div class="form-group">
           <label>Motor: </label>
