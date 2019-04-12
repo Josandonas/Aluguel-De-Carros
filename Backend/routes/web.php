@@ -42,3 +42,10 @@ Route::post('garagem_carro_editar/{id}', 'CarrosController@update');
 Route::get('garagem_carro_apagar/{id}', 'CarrosController@destroy');
 Route::post('cadastro','ClienteController@store');
 Route::post('/login', 'ClienteController@login');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
