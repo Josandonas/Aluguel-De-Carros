@@ -76,8 +76,7 @@
                 <th>Aceleração</th>
                 <th>Categoria</th>
                 <th>Motor</th>
-                <th>Dimensões</th> 
-				<th>valor</th>
+                <th>Dimensões</th> 			
 				<th>Editar</th>
 				<th>Remover</th>				
 							
@@ -89,7 +88,6 @@
             <td>{{$car->categoria}}</td>
             <td>{{$car->motor}}</td>
             <td>{{$car->dimensao}}</td>
-			 <td>{{$car->valor}}</td>
 			<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarcarros">
   Editar
 </button>
@@ -238,13 +236,6 @@
 
 	</center>
 
-	<center>
-		<label>valor: </label>		
-			<div class="input-group col-md-4">
-				<span class="input-group-addon"></span>
-				<input type="text" name="valor" id="valor" class="form-control"  value=" {{$car->valor}}  required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
-			</div>
-		</br>
 
     <input  type="hidden" name="disponivel" value=1>
             <!-- footer -->
