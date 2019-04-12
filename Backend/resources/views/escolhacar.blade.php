@@ -44,8 +44,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">                
                       <li class="nav-item">
                         <!--https://forum.imasters.com.br/topic/466064-exibir-nome-do-usu%C3%A1rio-logado/    link para colocar nome na page-->
-                        <a class="nav-link js-scroll-trigger"><h1><strong>
-           <?php/* echo $listar['nome'] */?></strong></h1></a>
+                        <a class="nav-link js-scroll-trigger"><h1><strong></strong></h1></a>
                       </li>
 
                     </ul>
