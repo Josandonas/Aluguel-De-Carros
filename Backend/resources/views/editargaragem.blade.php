@@ -81,18 +81,18 @@
 				<th>NUMERO</th>		
 				<th>CEP</th>				
 							
-            </tr>
-@foreach ($agencia as $age)
-            <td>{{$age->nome}}</td>
-			<td>{{$age->CNPJ}}</td>
-			<td>{{$age->EMAIL}}</td>
-			<td>{{$age->TELEFONE}}</td>
-			<td>{{$age->CIDADE}}</td>
-			<td>{{$age->ESTADO}}</td>
-			<td>{{$age->RUA}}</td>
-			<td>{{$age->NUMERO}}</td>
-			<td>{{$age->CEP}}</td>
-			<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editargaragem">
+            </tr> 
+@foreach($agencia as $age)
+            <td>{{$age->razao_social}}</td>
+		      	<td>{{$age->cnpj}}</td>
+            <td>{{$age->email}}</td>
+            <td>{{$age->telefone}}</td>
+            <td>{{$age->cidade}}</td>
+            <td>{{$age->estado}}</td>
+            <td>{{$age->rua}}</td>
+            <td>{{$age->numero}}</td>
+            <td>{{$age->cep}}</td>
+    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editargaragem">
   Editar
 </button>
 							<td><a href="#" button class="btn btn-danger">

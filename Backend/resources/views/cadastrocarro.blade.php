@@ -67,7 +67,7 @@
 
 
 
-<form class="container" method="post" enctype="multipart/form-data">
+<form class="container" method="POST" action="/garagem_carro-cadastro" enctype="multipart/form-data">
 
     <fieldset>
 
@@ -143,7 +143,7 @@
 
 		<legend>Concluir Cadastro</legend>
       <div class="form-group">
-	        <button name="incluir" type="submit" class="btn btn-primary"/>Cadastrar Veículo</button>
+	        <button type="submit" class="btn btn-primary">Cadastrar Veículo</button>
 	 </div>	
 </center>	 
 </form>

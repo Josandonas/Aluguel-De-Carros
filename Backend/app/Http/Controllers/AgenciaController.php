@@ -24,7 +24,7 @@ class AgenciaController extends Controller
      */
     public function create()
     {
-        return view('cadastrogaragem');
+        return view('cadastroagenciaagem');
     }
 
     /**
@@ -35,16 +35,20 @@ class AgenciaController extends Controller
      */
     public function store(Request $request)
     {
-        $gar = new Agencia();
+        $agencia = new Agencia();
 
-        $gar->cnpj = $request->input('cnpj');
-        $gar->razao_social = $request->input('razao_social');
-        $gar->telefone = $request->input('telefone');
-        $gar->email = $request->input('email');
-        $gar->endereco = $request->input('cep');
+        $agencia->cnpj = $request->input('cnpj');
+        $agencia->razao_social = $request->input('razao_social');
+        $agencia->telefone = $request->input('telefone');
+        $agencia->email = $request->input('email');
+        $agencia->cidade = $request->input('cidade');
+        $agencia->estado = $request->input('estado');
+        $agencia->rua = $request->input('rua');
+        $agencia->numero = $request->input('numero');
+        $agencia->cep = $request->input('cep');
 
-        $gar->save();
-        return redirect('controlegaragem');
+        $agencia->save();
+        return redirect('controleagenciaagem');
     }
 
     /**
@@ -55,9 +59,9 @@ class AgenciaController extends Controller
      */
     public function show($id)
     {
-        $gar = Agencia::find($id);
+        $agencia = Agencia::find($id);
 
-        return $gar;
+        return $agencia;
     }
 
     /**
@@ -68,10 +72,10 @@ class AgenciaController extends Controller
      */
     public function edit($id)
     {
-        $gar = Agencia::find($id);
+        $agencia = Agencia::find($id);
 
-        if(isset($gar)){
-            return view('editargaragem',compact('gar'));
+        if(isset($agencia)){
+            return view('editargaragem',compact('agencia'));
         }
     }
 
@@ -84,13 +88,20 @@ class AgenciaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $gar = Agencia::find($id);
+        $agencia = Agencia::find($id);
 
-        if(isset($gar)){
-            $gar->cnpj = $request->input('cnpj');
-            $gar->razao_social = $request->input('razao_social');
+        if(isset($agencia)){
+            $agencia->cnpj = $request->input('cnpj');
+            $agencia->razao_social = $request->input('razao_social');
+            $agencia->telefone = $request->input('telefone');
+            $agencia->email = $request->input('email');
+            $agencia->cidade = $request->input('cidade');
+            $agencia->estado = $request->input('estado');
+            $agencia->rua = $request->input('rua');
+            $agencia->numero = $request->input('numero');
+            $agencia->cep = $request->input('cep');
 
-            $gar->save();
+            $agencia->save();
         }
         return redirect('/garagem');
     }
@@ -103,10 +114,10 @@ class AgenciaController extends Controller
      */
     public function destroy($id)
     {
-        $gar = Agencia::find($id);
+        $agencia = Agencia::find($id);
 
-        if(isset($gar)){
-            $gar->delete();
+        if(isset($agencia)){
+            $agencia->delete();
         }
         return redirect('/garagem');
     }

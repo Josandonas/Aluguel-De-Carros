@@ -42,12 +42,12 @@ class CarrosController extends Controller
         $carro->modelo = $request->input('modelo');
         $carro->potencia = $request->input('potencia');
         $carro->aceleracao = $request->input('aceleracao');
-        $carro->categoria = $request->input('categoria');
+        $carro->dimensao = $request->input('dimensao');        
         $carro->motor = $request->input('motor');
-        $carro->dimensao = $request->input('dimensao');
+        $carro->categoria = $request->input('categoria');
         $carro->agencia = $request->input('agencia');
         $carro->disponivel = $request->input('disponivel');
-        $carro->imagem = $request->imagem; 
+        $carro->imagem = $request->input('imagem'); 
         $carro->save();
 
         return redirect('/garagem');

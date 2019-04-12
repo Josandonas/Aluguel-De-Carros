@@ -43,7 +43,7 @@
         <ul class="navbar-nav text-uppercase ml-auto">
 
          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"  href="/garagem/cadastro" >Cadastro Garagem</a>
+            <a class="nav-link js-scroll-trigger"  href="/garagem-cadastro" >Cadastro Garagem</a>
           </li>  
 
           <li class="nav-item">
@@ -62,9 +62,9 @@
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
         <div class="intro-heading text-uppercase"> Edite</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/carro/cadastro"> Cadastrar carro </a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/editar"> Editar dados garagem</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem/carro/editar"> Editar dados Carros</a>        
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_carro_cadastro"> Cadastrar carro </a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_editar"> Editar dados garagem</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_carro_editar"> Editar dados Carros</a>        
 
       </div>
 
