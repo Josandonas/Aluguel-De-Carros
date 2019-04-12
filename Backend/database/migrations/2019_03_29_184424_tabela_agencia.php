@@ -13,8 +13,8 @@ class TabelaAgencia extends Migration
      */
     public function up()
     {
-        Schema::create('agencia', function (Blueprint $table) {
-            $table->char('cnpj',14);
+        Schema::create('agencias', function (Blueprint $table) {
+            $table->char('cnpj',18);
             $table->string('razao_social');
             $table->string('telefone');
             $table->string('email');

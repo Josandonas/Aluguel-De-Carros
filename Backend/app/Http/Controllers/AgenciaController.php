@@ -49,7 +49,7 @@ class AgenciaController extends Controller
         $agencia->cep = $request->input('cep');
 
         $agencia->save();
-        return redirect('controlegaragem');
+        return redirect('/garagem');
     }
 
     /**

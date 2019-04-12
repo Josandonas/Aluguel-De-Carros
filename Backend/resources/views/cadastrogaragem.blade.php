@@ -67,7 +67,7 @@
 
 <!-- body -->
             <div class="modal-body">
-                <form>
+                <form method="POST" action="/garagem_cadastro/">
                     <div class="form-group">
                         <label for="inputName">Nome da Garagem:</label> 
                         <input type="text" name="razao_social" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
@@ -75,7 +75,7 @@
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18"  OnKeyPress="formatar('##.###.###/####-##', this)">
                     </div>
 
                     <div class="form-group">
@@ -113,16 +113,15 @@
                         <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep">
                     </div>
 					                           
-                </form>
             </div>
 
             <!-- footer -->
             <div class="modal-footer">
 			  <a href="/garagem"> Já possui uma garagem?</a>
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+                    <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
             </div>
             <!-- end footer -->
-
+</form>
             <!-- footer -->
             <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
