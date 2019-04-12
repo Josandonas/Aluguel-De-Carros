@@ -64,32 +64,30 @@
 
 
 
+    <form action="/garagem_carro_editar/{{$carros->id}}" method="POST">
 <div class="card">
     <div class="card-header">
         Cadastro de carros
     </div>
-@foreach ($carros as $car)
 
-            <div class="modal-body">
-                <form>
          <div class="form-group">          
 		  <label>Nome: </label>
-			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" value="{{$car->nome}}" required>
+			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" value="{{$carros->nome}}" required>
     </div>
 
     <div class="form-group">          
 		  <label>Modelo: </label>
-			<input type="text" name="modelo" class="form-control" placeholder="Digite aqui o modelo do carro"  value="{{$car->potencia}}" required>
+			<input type="text" name="modelo" class="form-control" placeholder="Digite aqui o modelo do carro"  value="{{$carros->modelo}}" required>
     </div>
 
 		<div class="form-group">          
 		  <label>Potência: </label>
-			<input type="text" name="potencia" class="form-control" placeholder="Digite aqui a Potência" value="{{$car->aceleracao}}" required>
+			<input type="text" name="potencia" class="form-control" placeholder="Digite aqui a Potência" value="{{$carros->potencia}}" required>
     </div>
 
 		<div class="form-group">
           <label>Aceleração: </label>
-			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" value="{{$car->aceleracao}}" required>
+			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" value="{{$carros->aceleracao}}" required>
         </div>
 
 	<div class="form-group">
@@ -107,14 +105,19 @@
 
 		<div class="form-group">
           <label>Motor: </label>
-			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" value="{{$car->motor}}" required>
+			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" value="{{$carros->motor}}" required>
+        </div>
+
+        <div class="form-group">
+          <label>CNPJ da Agencia: </label>
+			<input type="text" name="agencia" id="Motor" class="form-control" placeholder="Digite aqui o CNPJ da agencia" value="{{$carros->agencia}}" required>
         </div>
 
 	<center>
 		<div class="form-group">
 		<label>Dimensões: </label>
 				<div class="input-group col-md-5">
-					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" value=" {{$car->dimensao}}" required>
+					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" value=" {{$carros->dimensao}}" required>
 				</div>
 			</div>	
 
@@ -126,7 +129,7 @@
     <input  type="hidden" name="disponivel" value=1>
             <!-- footer -->
             <div class="modal-footer">
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+                    <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
             </div>
             <!-- end footer -->
 
@@ -134,10 +137,8 @@
             <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
             </div>
-			
-@endforeach
 
-
+</form>
 
 
 <a class="navbar-brand" href="/garagem">Voltar</a>
@@ -194,14 +195,6 @@
   </div>
 </div>
 <!--  end-Modal -->
-
-
-
-
-
-
-<
-
 
 
 

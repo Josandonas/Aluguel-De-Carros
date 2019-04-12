@@ -82,18 +82,20 @@
 							
             </tr>
 @foreach ($carros as $car)
+  <tr>
             <td>{{$car->nome}}</td>
             <td>{{$car->potencia}}</td>
             <td>{{$car->aceleracao}}</td>
             <td>{{$car->categoria}}</td>
             <td>{{$car->motor}}</td>
             <td>{{$car->dimensao}}</td>
-			<td><a href="alterarcarro.blade.php" button type="button" class="btn btn-primary">
+			<td><a href="/garagem_carro-editar/{{$car->id}}" button type="button" class="btn btn-primary">
   Editar
 </button>
-							<td><a href="#" button class="btn btn-danger">
+							<td><a href="/garagem_carro_apagar/{{$car->id}}" button class="btn btn-danger">
 									<span class="glyphicon glyphicon-trash">Remover</span>
-								</button></td> 	
+								</button></td>
+  </tr>
 @endforeach
         </thead>
         <tbody>
@@ -103,7 +105,7 @@
 	
 	
     <div class="card-footer">
-        <a href= "/garagem/carro/cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
+        <a href= "/garagem_carro_cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
     </div>
 </div>
 

@@ -37,6 +37,8 @@ Route::get('garagem_editar', 'AgenciaController@index');
 Route::get('garagem_carro_cadastro', 'CarrosController@create');
 Route::post('garagem_carro-cadastro', 'CarrosController@store');
 Route::get('garagem_carro_editar', 'CarrosController@index');
+Route::get('garagem_carro-editar/{id}', 'CarrosController@edit');
 Route::post('garagem_carro_editar/{id}', 'CarrosController@update');
+Route::get('garagem_carro_apagar/{id}', 'CarrosController@destroy');
 Route::post('cadastro','ClienteController@store');
 Route::post('/login', 'ClienteController@login');

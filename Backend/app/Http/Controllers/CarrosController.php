@@ -72,8 +72,8 @@ class CarrosController extends Controller
      */
     public function edit($id)
     {
-        $carro = Carro :: find($id);
-        return view();
+        $carros = Carro :: find($id);
+        return view('alterarcarro', compact('carros'));
     }
 
     /**
@@ -110,6 +110,9 @@ class CarrosController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $carros = Carro::find($id);
+       $carros->delete();
+
+       return redirect('garagem_carro_editar');
     }
 }
