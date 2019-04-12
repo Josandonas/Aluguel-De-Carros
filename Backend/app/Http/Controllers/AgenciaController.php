@@ -14,7 +14,8 @@ class AgenciaController extends Controller
      */
     public function index()
     {
-        return view('editargaragem');
+        $agencia = Agencia::all();
+        return view('editargaragem', compact('agencia'));
     }
 
     /**
