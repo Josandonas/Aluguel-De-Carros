@@ -183,7 +183,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
             </div>
             <!-- body -->
+			
 @foreach ($carros as $car)
+
             <div class="modal-body">
                 <form>
          <div class="form-group">          
@@ -255,6 +257,10 @@
             <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
             </div>
+			
+@endforeach
+			
+			
             <!-- end footer -->
         </div>
     </div>
