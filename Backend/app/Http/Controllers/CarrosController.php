@@ -72,7 +72,8 @@ class CarrosController extends Controller
      */
     public function edit($id)
     {
-    //
+        $carro = Carro :: find($id);
+        return view();
     }
 
     /**
@@ -84,7 +85,21 @@ class CarrosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $carro = Carro::find($id);
+
+        $carro->nome = $request->input('nome');
+        $carro->modelo = $request->input('modelo');
+        $carro->potencia = $request->input('potencia');
+        $carro->aceleracao = $request->input('aceleracao');
+        $carro->dimensao = $request->input('dimensao');        
+        $carro->motor = $request->input('motor');
+        $carro->categoria = $request->input('categoria');
+        $carro->agencia = $request->input('agencia');
+        $carro->disponivel = $request->input('disponivel');
+        $carro->imagem = $request->input('imagem'); 
+        $carro->save();
+
+        return redirect('garagem_carro_editar'); 
     }
 
     /**

@@ -25,7 +25,7 @@ class AgenciaController extends Controller
      */
     public function create()
     {
-        return view('cadastroagenciaagem');
+        return view('cadastrogaragem');
     }
 
     /**
@@ -49,7 +49,7 @@ class AgenciaController extends Controller
         $agencia->cep = $request->input('cep');
 
         $agencia->save();
-        return redirect('controleagenciaagem');
+        return redirect('controlegaragem');
     }
 
     /**

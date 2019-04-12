@@ -93,6 +93,18 @@
 			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" required>
         </div>
 
+    <div class="form-group">
+		<label>Dimensões: </label>
+				<div class="input-group col-md-3">
+					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" required>
+				</div>
+			</div>
+
+    <div class="form-group">
+          <label>Motor: </label>
+			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" required>
+        </div>
+
 		<div class="form-group">
          <label>Categoria: </label>
 			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
@@ -106,46 +118,23 @@
 			</select>
     	</div>
 		
+      <label>Confirme a agência: </label>		
+			<div class="input-group col-md-2">
+				<span class="input-group-addon"></span>
+				<input type="text" name="agencia" id="agencia" class="form-control" required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
+			</div>
+
+      <input type="hidden" name="disponivel" value=1>
 
 		<div class="form-group">
         <label for="imagem">Imagem:</label>
         <input type="file" name="imagem"/>
        </div>
         
-    </form>
-
-		<div class="form-group">
-          <label>Motor: </label>
-			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" required>
-        </div>
-
-	<center>
-		<div class="form-group">
-		<label>Dimensões: </label>
-				<div class="input-group col-md-3">
-					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" required>
-				</div>
-			</div>	
-
-		</fieldset>
-
-	</center>
-
-	<center>
-		<label>Confirme a agência: </label>		
-			<div class="input-group col-md-2">
-				<span class="input-group-addon"></span>
-				<input type="text" name="agencia" id="agencia" class="form-control" placeholder="00000-000">
-			</div>
-		</br>
-
-    <input  type="hidden" name="disponivel" value=1>
-
 		<legend>Concluir Cadastro</legend>
       <div class="form-group">
 	        <button type="submit" class="btn btn-primary">Cadastrar Veículo</button>
 	 </div>	
-</center>	 
 </form>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>

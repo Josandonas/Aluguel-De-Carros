@@ -43,8 +43,8 @@
         <ul class="navbar-nav text-uppercase ml-auto">
 
            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/garagem/cadastro">Cadastro Garagem</a>
-          </li>    
+            <a class="nav-link js-scroll-trigger" href="/garagem-cadastro">Cadastro Garagem</a>
+          </li> 
 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#cadas1" >Cadastro</a>

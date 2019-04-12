@@ -76,25 +76,30 @@
                 <th>Aceleração</th>
                 <th>Categoria</th>
                 <th>Motor</th>
-                <th>Dimensões</th> 			
+                <th>Dimensões</th> 
+				<th>valor</th>
 				<th>Editar</th>
 				<th>Remover</th>				
 							
             </tr>
 @foreach ($carros as $car)
+  <tr>
             <td>{{$car->nome}}</td>
             <td>{{$car->potencia}}</td>
             <td>{{$car->aceleracao}}</td>
             <td>{{$car->categoria}}</td>
             <td>{{$car->motor}}</td>
             <td>{{$car->dimensao}}</td>
-			<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarcarros">
+			 <td>{{$car->valor}}</td>
+			<td><a href="/garagem_carro_editar/{{$car->id}}" class="btn btn-primary" data-toggle="modal" data-target="#editarcarros">
   Editar
-</button>
+</a></td>
 							<td><a href="#" button class="btn btn-danger">
 									<span class="glyphicon glyphicon-trash">Remover</span>
 								</button></td> 	
+    </tr>
 @endforeach
+
         </thead>
         <tbody>
 
@@ -103,7 +108,7 @@
 	
 	
     <div class="card-footer">
-        <a href= "/garagem/carro/cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
+        <a href= "/garagem_carro_cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
     </div>
 </div>
 
@@ -182,10 +187,12 @@
             </div>
             <!-- body -->
 			
-@foreach ($carros as $car)
+
 
             <div class="modal-body">
-                <form>
+
+
+  <form method="POST" action="/garagem_carro_editar/{{$car->id}}">
          <div class="form-group">          
 		  <label>Nome: </label>
 			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" value="{{$car->nome}}" required>
@@ -236,20 +243,26 @@
 
 	</center>
 
+	<center>
+		<label>Agencia(CEP): </label>		
+			<div class="input-group col-md-4">
+				<span class="input-group-addon"></span>
+				<input type="text" name="agencia" id="valor" class="form-control"  value=" {{$car->agencia}}" placeholder="100.000,00">
+			</div>
+		</br>
 
     <input  type="hidden" name="disponivel" value=1>
             <!-- footer -->
             <div class="modal-footer">
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
+                    <button type="submit" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
             </div>
             <!-- end footer -->
-
+</form>
             <!-- footer -->
             <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
             </div>
 			
-@endforeach
 			
 			
             <!-- end footer -->

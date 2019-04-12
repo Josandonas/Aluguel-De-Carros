@@ -83,8 +83,9 @@
 							
             </tr> 
 @foreach($agencia as $age)
+  <tr>
             <td>{{$age->razao_social}}</td>
-		    <td>{{$age->cnpj}}</td>
+		      	<td>{{$age->cnpj}}</td>
             <td>{{$age->email}}</td>
             <td>{{$age->telefone}}</td>
             <td>{{$age->cidade}}</td>
@@ -97,7 +98,8 @@
 </button>
 							<td><a href="#" button class="btn btn-danger">
 									<span class="glyphicon glyphicon-trash">Remover</span>
-								</button></td> 	
+								</button></td>
+    </tr> 	
 @endforeach
         </thead>
         <tbody>
@@ -146,47 +148,47 @@
                 <form>
                     <div class="form-group">
                         <label for="inputName">Nome da Garagem:</label> 
-                        <input type="text" name="razao_social" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial" value="{{$car->razao_social}}">
+                        <input type="text" name="razao_social" class="form-control" id="razaoSocial" placeholder="Nome da Garagem" ng-model="razaoSocial">
                     </div>
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)" value="{{$car->cnpj}}">
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="14"  OnKeyPress="formatar('##.###.###/####-##', this)">
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">Email:</label> 
-                        <input type="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus" value="{{$car->email}}">
+                        <input type="email" class="form-control" id="email" name = "email" placeholder="exemplo@outlook.com" ng-model="cadastroEmail" required="autofocus">
                     </div>
 
 	          				<div class="form-group">
                         <label for="inputTel" >Telefone:</label> 
-                        <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" value="{{$car->telefone}}" required="autofocus">
+                        <input class="form-control" id="telefone" name = "telefone" maxlength="13" placeholder=" (00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" required="autofocus">
                     </div>
 
                     <div class="form-group">
                         <label for="inputName">Cidade:</label> 
-                        <input type="text" name="cidade" class="form-control" id="Cidade" placeholder="Nome da Cidade" ng-model="Cidade" value="{{$car->cidade}}" >
+                        <input type="text" name="cidade" class="form-control" id="Cidade" placeholder="Nome da Cidade" ng-model="Cidade">
                     </div>
 
                     <div class="form-group">
                         <label for="inputName">Estado:</label> 
-                        <input type="text" name="estado" class="form-control" id="Estado" placeholder="Nome do Estado" ng-model="Estado" value="{{$car->estado}}">
+                        <input type="text" name="estado" class="form-control" id="Estado" placeholder="Nome do Estado" ng-model="Estado">
                     </div>
 
                     <div class="form-group">
                         <label for="inputName">Rua:</label> 
-                        <input type="text" name="rua" class="form-control" id="Rua" placeholder="Nome da Rua" ng-model="Rua" value="{{$car->rua}}">
+                        <input type="text" name="rua" class="form-control" id="Rua" placeholder="Nome da Rua" ng-model="Rua">
                     </div>
 
                     <div class="form-group">
                         <label for="inputName">Número:</label> 
-                        <input type="text" name="numero" class="form-control" id="numero" placeholder="Numero" ng-model="Numero" value="{{$car->numero}}">
+                        <input type="text" name="numero" class="form-control" id="numero" placeholder="Numero" ng-model="Numero">
                     </div>
 
                     <div class="form-group">
                         <label for="inputName">CEP:</label> 
-                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep" value="{{$car->cep}}">
+                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep">
                     </div>
 					                           
                 </form>
