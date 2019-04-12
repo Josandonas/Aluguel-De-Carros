@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Cliente;
+use Illuminate\Support\Facades\Auth;
 
 class ClienteController extends Controller
 {
@@ -90,5 +91,15 @@ class ClienteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function login(Resquest $request){
+        $credenciais = $request->only('email', 'senha');
+        if (Auth::attempt($credenciais)) {
+            return redirect('/posLogin')->with('message','Login feito com sucesso');
+          }
+          else{
+              return redirect()->back()->with('message','Email ou Senha inválidos!');
+          }
     }
 }

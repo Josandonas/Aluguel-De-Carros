@@ -186,24 +186,24 @@
       <div class="modal-body">
         <!-- body -->
         <div class="modal-header">
-          <form role="form">
+          <form  method="POST" action ="/login" role="form">
             <div class="form-group">
 
                 <div class="input-group margin-bottom-sm">
                   <span class="input-group-addon"><i class="fas fa-envelope fa-fw"></i></span>
-                  <input class="form-control" type="text" placeholder="Email" required autofocus>
+                  <input class="form-control" type="text" name = "email" placeholder="Email" required autofocus>
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                  <input class="form-control" type="password" placeholder="Senha" required autofocus>
+                  <input class="form-control" type="password" name = "senha" placeholder="Senha" required autofocus>
                 </div>
             </div>
-          </form>
         </div>
         <!-- footer -->
         <div class="modal-footer">
            <input class="btn btn-success btn-lg  btn-block " type="submit" value="Entrar" class="btn">
         </div> 
+        </form>
 
         <div class="modal-footer">
             <a href="#"> Não tem uma conta ainda?</a>
