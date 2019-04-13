@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Carro;
+use Illuminate\Support\Facades\Storage;
 
 class CarrosController extends Controller
 {
@@ -47,7 +48,7 @@ class CarrosController extends Controller
         $carro->categoria = $request->input('categoria');
         $carro->agencia = $request->input('agencia');
         $carro->disponivel = $request->input('disponivel');
-        $carro->imagem = $request->input('imagem'); 
+        $carro->imagem = Storage::putFileAs('iCarros', $request->file('imagem')); 
         $carro->save();
 
         return redirect('/garagem');
