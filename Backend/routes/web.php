@@ -26,7 +26,7 @@ Route::get('/luxo',function(){
 
 Route::get('/posLogin', function(){
     return view('posLogin');
-});
+})->middleware('auth');
 
 Route::get('/garagem',function(){
     return view('controlegaragem');
