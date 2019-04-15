@@ -192,7 +192,8 @@
                     </div>
                   </div>
               </div>
-              <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" type="submit" > Seguir</a>
+              <button class="btn btn-info btn-lg  text-uppercase js-scroll-trigger" type="submit" >Seguir</button>
+              
             </div>
         </header>
         <!-- end Header e bloco de pesquisa -->
