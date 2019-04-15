@@ -62,10 +62,10 @@
                       <div class="facareserva">
                         <div class="passo1">
                           <div class="row">
-                            <div class="col-3">
-                              <h5><label for="mySearch">Nome da agência:</label>  </h5>
+                            <div class="col-2">
+                              <h5><label for="mySearch">Agência:</label>  </h5>
                             </div>
-                            <div class="col-8">
+                            <div class="col-9">
                                 <input class="form-control form-control-lg" type="text" placeholder="Nome da Agência" >
                             </div>
                             <div class="col-1">
