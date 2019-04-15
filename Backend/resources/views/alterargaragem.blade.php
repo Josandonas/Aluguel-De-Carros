@@ -64,7 +64,7 @@
 
 
 
-    <form action="/garagem_garagem_editar/{{$agencia->cnpj}}" method="POST">
+    <form action="/garagem_editar/{{$agencia->cnpj}}" method="POST">
 <div class="card">
     <div class="card-header">
     </div>

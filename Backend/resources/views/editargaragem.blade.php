@@ -93,10 +93,10 @@
             <td>{{$age->rua}}</td>
             <td>{{$age->numero}}</td>
             <td>{{$age->cep}}</td>
-			<td><a href="/garagem_garagem-editar/{{$age->cnpj}}" button type="button" class="btn btn-primary">
+			<td><a href="/garagem-editar/{{$age->cnpj}}" button type="button" class="btn btn-primary">
   Editar
 </button>
-							<td><a href="/garagem_garagem_apagar/{{$age->cnpj}}" button class="btn btn-danger">
+							<td><a href="/garagem_apagar/{{$age->cnpj}}" button class="btn btn-danger">
 									<span class="glyphicon glyphicon-trash">Remover</span>
 								</button></td>
   </tr> 	
@@ -109,7 +109,7 @@
 	
 	
     <div class="card-footer">
-        <a href= "/garagem/carro/cadastro" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
+        <a href= "/garagem_carro_cadastro" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
     </div>
 </div>
 
