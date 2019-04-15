@@ -109,7 +109,7 @@
 	
 	
     <div class="card-footer">
-        <a href= "/garagem_carro_cadastro" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
+        <a href= "/garagem-cadastro" class="btn btn-primary btn-sm">Cadastrar nova garagem</a>
     </div>
 </div>
 

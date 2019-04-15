@@ -26,7 +26,7 @@ Route::get('/luxo',function(){
 
 Route::get('/posLogin', function(){
     return view('posLogin');
-})->middleware('auth');
+});
 
 Route::get('/garagem',function(){
     return view('controlegaragem');
@@ -52,5 +52,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/index', function(){
+    return view('index');
+})->name('index');
 
 Route::get('/home', 'HomeController@index')->name('home');

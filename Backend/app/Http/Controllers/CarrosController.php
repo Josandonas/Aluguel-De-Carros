@@ -48,7 +48,7 @@ class CarrosController extends Controller
         $carro->categoria = $request->input('categoria');
         $carro->agencia = $request->input('agencia');
         $carro->disponivel = $request->input('disponivel');
-        $carro->imagem = Storage::putFileAs('iCarros', $request->file('imagem')); 
+        $carro->imagem = Storage::putFile('iCarros', $request->file('imagem')); 
         $carro->save();
 
         return redirect('/garagem');

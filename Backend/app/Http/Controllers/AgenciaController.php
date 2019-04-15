@@ -76,7 +76,7 @@ class AgenciaController extends Controller
         $agencia = Agencia::find($id);
 
         if(isset($agencia)){
-            return view('editargaragem',compact('agencia'));
+            return view('alterargaragem',compact('agencia'));
         }
     }
 

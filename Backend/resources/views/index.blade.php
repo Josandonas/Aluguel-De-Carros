@@ -186,7 +186,8 @@
       <div class="modal-body">
         <!-- body -->
         <div class="modal-header">
-          <form  method="POST" action ="/login" role="form">
+          <form  method="POST" action ="{{ route('login') }}" role="form">
+          @csrf
             <div class="form-group">
 
                 <div class="input-group margin-bottom-sm">

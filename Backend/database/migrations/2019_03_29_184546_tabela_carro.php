@@ -22,7 +22,7 @@ class TabelaCarro extends Migration
             $table->string('dimensao');
             $table->string('motor');
             $table->integer('categoria');
-            $table->char('agencia', 14);
+            $table->char('agencia', 18);
             $table->tinyInteger('disponivel');
             $table->longText('imagem')->nullable();
             $table->foreign('categoria')->references('id')->on('categorias');
