@@ -61,10 +61,9 @@
 
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
-        <div class="intro-heading text-uppercase"> Edite</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_carro_cadastro"> Cadastrar carro </a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_editar"> Editar dados garagem</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_carro_editar"> Editar dados Carros</a>        
+        <div class="intro-heading text-uppercase"> Controle de Garagem</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/garagem_editar"> Garagens</a>
+               
 
       </div>
 

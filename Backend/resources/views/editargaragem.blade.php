@@ -62,43 +62,25 @@
 
       <div class="intro-text">
         <a href=""><div class="intro-lead-in">Automóveis Flux</div></a>
-        <div class="intro-heading text-uppercase">Editar Garagem</div>
+        <div class="intro-heading text-uppercase">Garagens</div>
 
 <div class="card">
     <div class="card-header">
-        Editar Garagem
+        Garagens
     </div>
     <table class="table table-hover table-striped table-bordered">
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>CNPJ</th>
-                <th>EMAIL</th>
-                <th>TELEFONE</th>
-                <th>CIDADE</th>
-                <th>ESTADO</th> 
-				<th>RUA</th>
-				<th>NUMERO</th>		
-				<th>CEP</th>				
+                
 							
             </tr> 
 @foreach($agencia as $age)
   <tr>
-            <td>{{$age->razao_social}}</td>
-		      	<td>{{$age->id}}</td>
-            <td>{{$age->email}}</td>
-            <td>{{$age->telefone}}</td>
-            <td>{{$age->cidade}}</td>
-            <td>{{$age->estado}}</td>
-            <td>{{$age->rua}}</td>
-            <td>{{$age->numero}}</td>
-            <td>{{$age->cep}}</td>
-			<td><a href="editar_gar/{{$age->id}}" button type="button" class="btn btn-primary">
-  Editar
-</button>
-							<td><a href="/garagem_apagar/{{$age->id}}" button class="btn btn-danger">
-									<span class="glyphicon glyphicon-trash">Remover</span>
-								</button></td>
+            <td><h5>{{$age->razao_social}}</h5></td> 
+            <td> <button class="btn-info btn-block btn-lg">Carros</button></td>
+            
+			<td> <a href="editar_gar/{{$age->id}}"><button  button type="button" class="btn-lg btn-block btn-success">Editar</button></a>
+  			<td><a href="/garagem_apagar/{{$age->id}}" button class="btn-lg btn-block btn-danger">Remover</button></td>
   </tr> 	
 @endforeach
         </thead>
