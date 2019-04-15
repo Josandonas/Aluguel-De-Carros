@@ -110,7 +110,7 @@
 
                     <div class="form-group">
                         <label for="inputName">CEP:</label> 
-                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep">
+                        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" ng-model="cep" maxlength="8">
                     </div>
 					                           
                 </form>
