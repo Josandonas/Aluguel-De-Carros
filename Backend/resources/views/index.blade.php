@@ -91,7 +91,7 @@
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Alugar</h4>
+          <a href="/posLogin"><h4 class="service-heading">Alugar</h4></a>
           <p class="text-muted"> Você não paga pela depreciação inicial sofrida pelo carro zero quilômetro. Os nossos carros têm cara de zero quilômetro e preço de seminovo.</p>
         </div>
         <div class="col-md-4">

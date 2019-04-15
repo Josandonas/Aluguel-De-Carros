@@ -14,7 +14,7 @@ class TabelaAgencia extends Migration
     public function up()
     {
         Schema::create('agencias', function (Blueprint $table) {
-            $table->char('cnpj',18);
+            $table->char('id',18);
             $table->string('razao_social');
             $table->string('telefone');
             $table->string('email');
@@ -23,7 +23,7 @@ class TabelaAgencia extends Migration
             $table->string('rua');
             $table->string('numero');
             $table->string('cep');
-            $table->primary('cnpj');
+            $table->primary('id');
             $table->timestamps();
         });
     }

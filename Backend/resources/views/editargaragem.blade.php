@@ -85,7 +85,7 @@
 @foreach($agencia as $age)
   <tr>
             <td>{{$age->razao_social}}</td>
-		      	<td>{{$age->cnpj}}</td>
+		      	<td>{{$age->id}}</td>
             <td>{{$age->email}}</td>
             <td>{{$age->telefone}}</td>
             <td>{{$age->cidade}}</td>
@@ -93,10 +93,10 @@
             <td>{{$age->rua}}</td>
             <td>{{$age->numero}}</td>
             <td>{{$age->cep}}</td>
-			<td><a href="/garagem-editar/{{$age->cnpj}}" button type="button" class="btn btn-primary">
+			<td><a href="editar_gar/{{$age->id}}" button type="button" class="btn btn-primary">
   Editar
 </button>
-							<td><a href="/garagem_apagar/{{$age->cnpj}}" button class="btn btn-danger">
+							<td><a href="/garagem_apagar/{{$age->id}}" button class="btn btn-danger">
 									<span class="glyphicon glyphicon-trash">Remover</span>
 								</button></td>
   </tr> 	

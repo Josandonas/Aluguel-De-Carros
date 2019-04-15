@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Agencia;
 
@@ -38,7 +39,7 @@ class AgenciaController extends Controller
     {
         $agencia = new Agencia();
 
-        $agencia->cnpj = $request->input('cnpj');
+        $agencia->id = $request->input('cnpj');
         $agencia->razao_social = $request->input('razao_social');
         $agencia->telefone = $request->input('telefone');
         $agencia->email = $request->input('email');
@@ -58,11 +59,11 @@ class AgenciaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        $agencia = Agencia::find($id);
+        $garagem = DB::table('agencias')->where('razao_social', $request->input('nome'))->join('carros', 'agencias.id', '=', 'carros.agencia')->get();
 
-        return $agencia;
+        return view('pagfim',['garagem' => $garagem]);
     }
 
     /**
@@ -74,10 +75,7 @@ class AgenciaController extends Controller
     public function edit($id)
     {
         $agencia = Agencia::find($id);
-
-        if(isset($agencia)){
-            return view('alterargaragem',compact('agencia'));
-        }
+        return view('alterargaragem',compact('agencia'));
     }
 
     /**
@@ -92,7 +90,7 @@ class AgenciaController extends Controller
         $agencia = Agencia::find($id);
 
         if(isset($agencia)){
-            $agencia->cnpj = $request->input('cnpj');
+            $agencia->id = $request->input('cnpj');
             $agencia->razao_social = $request->input('razao_social');
             $agencia->telefone = $request->input('telefone');
             $agencia->email = $request->input('email');
@@ -120,6 +118,6 @@ class AgenciaController extends Controller
         if(isset($agencia)){
             $agencia->delete();
         }
-        return redirect('/garagem');
+        return redirect('garagem_editar');
     }
 }

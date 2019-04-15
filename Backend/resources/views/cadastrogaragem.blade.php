@@ -75,7 +75,7 @@
 
                     <div class="form-group">
                         <label for="inputCpf">CNPJ:</label> 
-                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18"  OnKeyPress="formatar('##.###.###/####-##', this)">
+                        <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18">
                     </div>
 
                     <div class="form-group">

@@ -31,12 +31,15 @@ Route::get('/posLogin', function(){
 Route::get('/garagem',function(){
     return view('controlegaragem');
 });
+
+
 Route::get('garagem-cadastro','AgenciaController@create');
 Route::post('garagem_cadastro/', 'AgenciaController@store');
 Route::get('garagem_editar', 'AgenciaController@index');
-Route::get('garagem-editar/{id}, AgenciaController@edit');
+Route::get('editar_gar/{id}, AgenciaController@edit');
 Route::post('garagem_editar/{id}', 'AgenciaController@update');
 Route::get('garagem_apagar/{id}', 'AgenciaController@destroy');
+Route::post('buscar_garagem/', 'AgenciaController@show');
 
 Route::get('garagem_carro_cadastro', 'CarrosController@create');
 Route::post('garagem_carro-cadastro', 'CarrosController@store');

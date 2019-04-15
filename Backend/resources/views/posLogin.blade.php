@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav text-uppercase ml-auto">
                   <li class="nav-item">
-                    <a href="/garagem/cadastro" class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro de Garagem</a>
+                    <a href="/garagem-cadastro" class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro de Garagem</a>
                   </li>
                 <li class="nav-item">
                   <!--https://forum.imasters.com.br/topic/466064-exibir-nome-do-usu%C3%A1rio-logado/    link para colocar nome na page-->
@@ -58,16 +58,17 @@
         <header class="masthead" >
               <div class="intro-text">
                 <div class="form-group">
-                    <form>
+                    <form method="POST" action="/buscar_garagem/">
                       <div>
                         <label for="mySearch">Didite o nome da agência:</label>
-                        <input type="search" id="mySearch" name="q"
-                        placeholder="Nome da Agência" required
-                        size="30" pattern="[A-z]{2}[0-9]{4}">
-                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input type="search" id="mySearch" name="nome"
+                        placeholder="Nome da Agência" >
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <span class="validity"></span>
                       </div>
                     </form>
+
+
 
                   <div class="facareserva">
                     <div class="passo1">

@@ -43,16 +43,21 @@
                     </li>
                       </ul>
                       <ul>
-                         <a href="escolhacar.blade.php"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
+                         <a href="/posLogin"><button type="button" class="btn btn-primary btn-lg">Voltar</button></a>
                       </ul>
                     </div>
                   </div>
                 </nav>
-                <br>
-                <br>
+<br>                
+@foreach ($garagem as $garage)
+<tr>
 
+<td>{{$garage}}</td>
 
-
+</tr>
+    
+@endforeach
+<br>
 
             <!-- Footer -->
                 <footer class="py-5 bg-dark">
