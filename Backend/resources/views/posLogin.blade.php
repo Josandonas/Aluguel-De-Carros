@@ -76,7 +76,36 @@
                         <div class="col-5">
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-car fa-2x fa-border fa-pull-left"  aria-hidden="true"> </i></span>
-                            <input id="localre" type="text" class="form-control"  placeholder="Digite o Local de Retirada" required autofocus>
+                              <select id="inputEstado" class="form-control">
+                                <option selected>Local de Retirada</option>
+                                <option>Acre (AC)</option>
+                                <option>Alagoas (AL)</option>
+                                <option>Amapá (AP)</option>
+                                <option>Amazonas (AM)</option>
+                                <option>Bahia (BA)</option>
+                                <option>Ceará (CE)</option>
+                                <option>Distrito Federal (DF)</option>
+                                <option>Espírito Santo (ES)</option>
+                                <option>Goiás (GO)</option>
+                                <option>Maranhão (MA)</option>
+                                <option>Mato Grosso (MT)</option>
+                                <option>Mato Grosso do Sul (MS)</option>
+                                <option>Minas Gerais (MG)</option>
+                                <option>Pará (PA) </option>
+                                <option>Paraíba (PB)</option>
+                                <option>Paraná (PR)</option>
+                                <option>Pernambuco (PE)</option>
+                                <option>Piauí (PI)</option>
+                                <option>Rio de Janeiro (RJ)</option>
+                                <option>Rio Grande do Norte (RN)</option>
+                                <option>Rio Grande do Sul (RS)</option>
+                                <option>Rondônia (RO)</option>
+                                <option>Roraima (RR)</option>
+                                <option>Santa Catarina (SC)</option>
+                                <option>São Paulo (SP)</option>
+                                <option>Sergipe (SE)</option>
+                                <option>Tocantins (TO)</option>
+                              </select>
                           </div>
                         </div>
                         <div class="col-4">
@@ -99,10 +128,39 @@
                   <div class="facareserva">
                     <div class="passo1">
                       <div class="row">
-                        <div class="col-5">    
+                        <div class="col-5">
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-car fa-2x fa-border fa-pull-left"  aria-hidden="true"> </i></span>
-                            <input id="localre" type="text" class="form-control"  placeholder="Digite o Local de Devolução">
+                              <select id="inputEstado" class="form-control">
+                                <option selected>Local de devolução</option>
+                                <option>Acre (AC)</option>
+                                <option>Alagoas (AL)</option>
+                                <option>Amapá (AP)</option>
+                                <option>Amazonas (AM)</option>
+                                <option>Bahia (BA)</option>
+                                <option>Ceará (CE)</option>
+                                <option>Distrito Federal (DF)</option>
+                                <option>Espírito Santo (ES)</option>
+                                <option>Goiás (GO)</option>
+                                <option>Maranhão (MA)</option>
+                                <option>Mato Grosso (MT)</option>
+                                <option>Mato Grosso do Sul (MS)</option>
+                                <option>Minas Gerais (MG)</option>
+                                <option>Pará (PA) </option>
+                                <option>Paraíba (PB)</option>
+                                <option>Paraná (PR)</option>
+                                <option>Pernambuco (PE)</option>
+                                <option>Piauí (PI)</option>
+                                <option>Rio de Janeiro (RJ)</option>
+                                <option>Rio Grande do Norte (RN)</option>
+                                <option>Rio Grande do Sul (RS)</option>
+                                <option>Rondônia (RO)</option>
+                                <option>Roraima (RR)</option>
+                                <option>Santa Catarina (SC)</option>
+                                <option>São Paulo (SP)</option>
+                                <option>Sergipe (SE)</option>
+                                <option>Tocantins (TO)</option>
+                              </select>
                           </div>
                         </div>
                         <div class="col-4">
