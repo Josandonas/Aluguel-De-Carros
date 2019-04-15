@@ -59,16 +59,29 @@
               <div class="intro-text">
                 <div class="form-group">
                     <form method="POST" action="/buscar_garagem/">
-                      <div>
+                      <div class="facareserva">
+                        <div class="passo1">
+                          <div class="row">
+                            <div class="col-3">
+                              <h5><label for="mySearch">Nome da agência:</label>  </h5>
+                            </div>
+                            <div class="col-8">
+                                <input class="form-control form-control-lg" type="text" placeholder="Nome da Agência" >
+                            </div>
+                            <div class="col-1">
+                                <button type="submit"><i class="fa fa-3x fa-search" aria-hidden="true"></i></button>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                      <!--<div>
                         <label for="mySearch">Didite o nome da agência:</label>
                         <input type="search" id="mySearch" name="nome"
                         placeholder="Nome da Agência" >
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <span class="validity"></span>
-                      </div>
-                    </form>
-
-
+                      </div>-->
 
                   <div class="facareserva">
                     <div class="passo1">
@@ -123,7 +136,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                
                 <div class="form-group">
                   <div class="facareserva">
                     <div class="passo1">
