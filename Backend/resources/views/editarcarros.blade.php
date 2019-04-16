@@ -103,9 +103,10 @@
         </tbody>
     </table>
 	
+
 	
     <div class="card-footer">
-        <a href= "/garagem_carro_cadastro" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
+        <a href= "/carro_cadastro/{{$agencia}}" class="btn btn-primary btn-sm">Cadastrar novo carro</a>
     </div>
 </div>
 
@@ -175,90 +176,6 @@
 <!-- Modal editar carros  -->
 
 
-  <div class="modal fade" id="editarcarros" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" >Cadastre-se</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
-            </div>
-            <!-- body -->
-			
-@foreach ($carros as $car)
-
-            <div class="modal-body">
-                <form>
-         <div class="form-group">          
-		  <label>Nome: </label>
-			<input type="text" name="nome" class="form-control" placeholder="Digite aqui o nome do carro" value="{{$car->nome}}" required>
-    </div>
-
-    <div class="form-group">          
-		  <label>Modelo: </label>
-			<input type="text" name="modelo" class="form-control" placeholder="Digite aqui o modelo do carro"  value="{{$car->potencia}}" required>
-    </div>
-
-		<div class="form-group">          
-		  <label>Potência: </label>
-			<input type="text" name="potencia" class="form-control" placeholder="Digite aqui a Potência" value="{{$car->aceleracao}}" required>
-    </div>
-
-		<div class="form-group">
-          <label>Aceleração: </label>
-			<input type="text" name="aceleracao" id="Aceleração" class="form-control" placeholder="Digite aqui a Aceleração" value="{{$car->aceleracao}}" required>
-        </div>
-
-	<div class="form-group">
-         <label>Categoria: </label>
-			<select name="categoria" id="categoria" title="categoria" class="form-control" required>
-				<option selected disabled>Selecione a categoria</option>	
-				<option value="5">Carro de Luxo // Com Ar</option>
-				<option value="4">Carro intermediario Automático // Com Ar</option>
-        <option value="3">Carro intermediario Manual // Sem Ar</option>
-				<option value="2">Basico Automático// Com Ar</option>
-        <option value="1">Basico Manual// Sem ar</option>
-
-			</select>
-    	</div>
-
-		<div class="form-group">
-          <label>Motor: </label>
-			<input type="text" name="motor" id="Motor" class="form-control" placeholder="Digite aqui o Motor" value="{{$car->motor}}" required>
-        </div>
-
-	<center>
-		<div class="form-group">
-		<label>Dimensões: </label>
-				<div class="input-group col-md-5">
-					<input type="text" name="dimensao" id="Dimensões" class="form-control" placeholder="Largura x altura" value=" {{$car->dimensao}}" required>
-				</div>
-			</div>	
-
-		</fieldset>
-
-	</center>
-
-
-    <input  type="hidden" name="disponivel" value=1>
-            <!-- footer -->
-            <div class="modal-footer">
-                    <button type="button" id="btnCadastrar" class="btn btn-success btn-block" data-loading-text="Cadastrando...">Salvar Cadastro</button>
-            </div>
-            <!-- end footer -->
-
-            <!-- footer -->
-            <div class="modal-footer">
-                    <button type="button" class="btn btn-danger btn-block" class="close" data-dismiss="modal" aria-label="Close" > Cancelar</button>
-            </div>
-			
-@endforeach
-			
-			
-            <!-- end footer -->
-        </div>
-    </div>
-</div>
-<!--  end-Modal editar carros  -->
 
 
 

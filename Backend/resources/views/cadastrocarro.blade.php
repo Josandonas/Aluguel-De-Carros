@@ -117,11 +117,10 @@
 
 			</select>
     	</div>
-		
-      <label>Confirme a agência: </label>		
+				
 			<div class="input-group col-md-2">
 				<span class="input-group-addon"></span>
-				<input type="text" name="agencia" id="agencia" class="form-control" required aria-label="Amount (to the nearest dollar)" placeholder="100.000,00">
+				<input type="hidden" name="agencia" value="{{$agencia}}" id="agencia" class="form-control">
 			</div>
 
       <input type="hidden" name="disponivel" value=1>

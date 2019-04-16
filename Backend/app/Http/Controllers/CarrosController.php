@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Carro;
+use App\Agencia;
 use Illuminate\Support\Facades\Storage;
 
 class CarrosController extends Controller
@@ -13,11 +15,12 @@ class CarrosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
 
     {
-        $carros = Carro::all();
-        return view('editarcarros', compact('carros'));
+        $garagem = DB::table('carros')->where('agencia', $id)->get();
+
+        return view('editarcarros', ['carros'=> $garagem],['agencia' => $id]);
     }
 
     /**
@@ -25,9 +28,10 @@ class CarrosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('cadastrocarro');
+        $garagem = $id;
+        return view('cadastrocarro', ['agencia' => $garagem]);
     }
 
     /**
@@ -100,7 +104,7 @@ class CarrosController extends Controller
         $carro->imagem = $request->input('imagem'); 
         $carro->save();
 
-        return redirect('garagem_carro_editar'); 
+        return redirect('garagem'); 
     }
 
     /**

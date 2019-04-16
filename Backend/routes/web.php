@@ -36,14 +36,15 @@ Route::get('/garagem',function(){
 Route::get('garagem-cadastro','AgenciaController@create');
 Route::post('garagem_cadastro/', 'AgenciaController@store');
 Route::get('garagem_editar', 'AgenciaController@index');
-Route::get('editar_gar/{id}, AgenciaController@edit');
+Route::get('/editar_gar/{id}, AgenciaController@edit');
 Route::post('garagem_editar/{id}', 'AgenciaController@update');
 Route::get('garagem_apagar/{id}', 'AgenciaController@destroy');
 Route::post('buscar_garagem/', 'AgenciaController@show');
 
-Route::get('garagem_carro_cadastro', 'CarrosController@create');
+Route::get('carro_cadastro/{id}', 'CarrosController@create');
 Route::post('garagem_carro-cadastro', 'CarrosController@store');
 Route::get('garagem_carro_editar', 'CarrosController@index');
+Route::get('garagem_carros/{id}', 'CarrosController@index');
 Route::get('garagem_carro-editar/{id}', 'CarrosController@edit');
 Route::post('garagem_carro_editar/{id}', 'CarrosController@update');
 Route::get('garagem_carro_apagar/{id}', 'CarrosController@destroy');

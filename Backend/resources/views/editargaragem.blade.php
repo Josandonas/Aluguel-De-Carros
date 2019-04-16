@@ -41,6 +41,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" data-toggle="modal">Cadastro</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger"  data-toggle="modal" data-target="#exampleModal">login </a>
+          </li> 
+
+
         </ul>
       </div>
     </div>
@@ -67,10 +77,10 @@
 @foreach($agencia as $age)
   <tr>
             <td><h5>{{$age->razao_social}}</h5></td> 
-            <td> <button class="btn-info btn-block btn-lg">Carros</button></td>
+            <td><a href="garagem_carros/{{$age->id}}"> <button class="btn-info btn-block btn-lg">Carros</button></a></td>
             
-			<td> <a href="editar_gar/{{$age->id}}"><button  class="btn-lg btn-block btn-success">Editar</button></a>
-  			<td><a href="/garagem_apagar/{{$age->id}}" button class="btn-lg btn-block btn-danger">Remover</button></td>
+			<td> <a href="/editar_gar/{{$age->id}}" class="btn-lg btn-block btn-success">Editar</a>
+  			<td><a href="/garagem_apagar/{{$age->id}}" class="btn-lg btn-block btn-danger">Remover</a></td>
   </tr> 	
 @endforeach
         </thead>
@@ -180,7 +190,67 @@
         </div>
     </div>
 </div>
+<!--  end-Modal -->
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" >Login</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+
+      </div>
+      <div class="modal-body">
+        <!-- body -->
+        <div class="modal-header">
+          <form role="form">
+            <div class="form-group">
+
+                <div class="input-group margin-bottom-sm">
+                  <span class="input-group-addon"><i class="fas fa-envelope fa-fw"></i></span>
+                  <input class="form-control" type="text" placeholder="Email" required autofocus>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                  <input class="form-control" type="password" placeholder="Senha" required autofocus>
+                </div>
+            </div>
+          </form>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+           <input class="btn btn-success btn-lg  btn-block " type="submit" value="Entrar" class="btn">
+        </div> 
+
+        <div class="modal-footer">
+            <a href="#"> Não tem uma conta ainda?</a>
+            <input class="btn btn-info btn-lg  btn-block " type="submit" value=" Crie sua Conta" class="btn" data-toggle="modal" data-target="#cadas1">
+        </div>  
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--  end-Modal -->
 
 
 

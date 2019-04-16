@@ -63,7 +63,7 @@ class AgenciaController extends Controller
     {
         $garagem = DB::table('agencias')->where('razao_social', $request->input('nome'))->join('carros', 'agencias.id', '=', 'carros.agencia')->get();
 
-        return view('pagfim',['garagem' => $garagem]);
+        return view('pagfim',['agencia' => $garagem]);
     }
 
     /**
@@ -75,7 +75,7 @@ class AgenciaController extends Controller
     public function edit($id)
     {
         $agencia = Agencia::find($id);
-        return view('alterargaragem',compact('agencia'));
+        return view('alterargaragem', ['garagem' => $agencia]);
     }
 
     /**
