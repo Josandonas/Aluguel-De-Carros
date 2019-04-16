@@ -120,4 +120,22 @@ class CarrosController extends Controller
 
        return redirect('garagem_carro_editar');
     }
+
+    public function exibir($id){
+
+        $carros = DB::table('carros')->where('agencia', $id)->get();
+
+        return view('aluguel_carros', ['carros' => $carros], ['agencia' => $id]);
+    }
+
+    public function alugar_carro($id){
+        $carros = DB::table('carros')
+        ->join('agencias','carros.agencia','=','agencias.id')
+        ->select('carros.id as carro', 'agencias.razao_social as agencia','carros.nome as nome','carros.categoria as categoria')
+        ->where('carros.id', $id)
+        ->get();
+
+        return view('aluguel_fim', ['carro' => $carros]);
+    }
+
 }

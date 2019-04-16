@@ -96,7 +96,7 @@
 
             <tr>
               <td>{{$age->cep}}</td>
-              <td><a href=""> {{$age->razao_social}} </a></td>
+              <td><a href="carros_da_agencia/{{$age->id}}"> {{$age->razao_social}} </a></td>
               <td> {{$age->cidade}} </td>
               <td> {{$age->estado}} </td>
             </tr>
