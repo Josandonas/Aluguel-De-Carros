@@ -52,6 +52,7 @@ Route::get('garagem_carro_apagar/{id}', 'CarrosController@destroy');
 Route::get('carros_da_agencia/{id}', 'CarrosController@exibir');
 Route::get('alugar_carro_info/{id}', 'CarrosController@alugar_carro');
 Route::post('alugar_fim', 'AluguelController@store');
+Route::get('finalizar/{id}', 'AluguelController@index');
 
 Route::post('cadastro','ClienteController@store');
 Route::post('/login', 'ClienteController@login');

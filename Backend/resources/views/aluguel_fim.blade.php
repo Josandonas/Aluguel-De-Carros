@@ -53,11 +53,12 @@
           </div>
         </nav>
 
-        $carro_vet = $carro->toArray(); 
 
-    <form method="POST" action="/alugar_fim">
+<div id="pdf">
+@foreach($carro as $carro)
+    <form method="POST" id="formAluguel" action="/alugar_fim" >
         <label for="cpf"> Insira o seu CPF(Só numeros): </label>
-        <input type="text" name="cpf" maxlength="12" placeholder="CPF"><br>
+        <input type="text" name="cpf" maxlength="11" placeholder="CPF"><br>
 
         <label for="data_inicio"> Data de início do aluguel: </label>
         <input type="date" name="data_inicio" ><br>
@@ -66,23 +67,34 @@
         <input type="date" name="data_fim" ><br>
     
         <label for="garagem"> Agencia: </label>
-        <input type="text" name="agencia" value="{{$carro->pluck('agencia')}}"><br>
+        <input type="text" name="agencia" value="{{$carro->agencia}}"><br>
 
         <label for="carro"> Carro: </label>
-        <input type="text" name="nome" value="{{$carro->pluck('nome')}}"><br>
+        <input type="text" name="nome" value="{{$carro->nome}}"><br>
 
-        <input type="hidden" name="carro" value="{{$carro->pluck('carro')}}">
+        <input type="hidden" name="carro" value="{{$carro->carro}}">
 
         <label for="categoria"> Categoria: </label>
-        <input type="text" name="categoria" value="{{$carro->pluck('categoria')}}"><br>
+        <input type="text" name="categoria" value="{{$carro->categoria}}"><br>
 
         <button type="submit"> Concluir </button>
     
     </form>
+@endforeach
+</div>
+<script> 
+document.getElementById('submit').onclick = printDiv       
+function printDiv(e){
+    var printContents = document.getElementById('pdf').innerHTML;
+    var originalContents = document.body.innerHTML;
 
+    document.body.innerHTML = printContents;
 
-        
-      
+    window.print();
+
+    document.body.innerHTML = originalContents;
+}
+</script>
 
 
         <!-- Footer -->

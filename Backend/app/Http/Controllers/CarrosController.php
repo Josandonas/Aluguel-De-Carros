@@ -118,7 +118,7 @@ class CarrosController extends Controller
        $carros = Carro::find($id);
        $carros->delete();
 
-       return redirect('garagem_carro_editar');
+       return redirect('garagem_editar');
     }
 
     public function exibir($id){

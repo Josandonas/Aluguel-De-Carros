@@ -31,7 +31,7 @@
           <body id="page-top"  src="../img/categoria.jpg">
                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                   <div class="container">
-                    <a class="navbar-brand" href="index.blade.php"><h3>Sair</h3></a>
+                    <a class="navbar-brand" href="/"><h3>Sair</h3></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -48,15 +48,55 @@
                     </div>
                   </div>
                 </nav>
-<br>                
-@foreach ($garagem as $garage)
+<br>
+
+<div id="submit">
+<table class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+          <td> CPF do cliente </td>
+          <td> Data_inicio </td>
+          <td> Data fim </td>
+          <td> Agencia </td>
+          <td> Carro </td>
+          <td> Valor </td>
+    </tr>
+
 <tr>
 
-<td>{{$garage}}</td>
+<td>{{$aluguel->cliente}}</td>
+<td>{{$aluguel->data_inicio}}</td>
+<td>{{$aluguel->data_fim}}</td>
+<td>{{$aluguel->agencia}}</td>
+<td>{{$aluguel->carro}}</td>
+<td>{{$aluguel->valor_total}}</td>
+
+<td></td>
 
 </tr>
     
-@endforeach
+</thead>
+</table>
+
+<button id="gerarpdf" >Gerar PDF</button>
+</div>
+
+
+<script> 
+document.getElementById('gerarpdf').onclick = printDiv       
+function printDiv(e){
+    var printContents = document.getElementById('submit').innerHTML;
+    var originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+
+    window.print();
+
+    document.body.innerHTML = originalContents;
+}
+</script>
+
+  
 <br>
 
             <!-- Footer -->

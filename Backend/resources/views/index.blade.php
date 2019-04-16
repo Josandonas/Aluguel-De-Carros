@@ -238,7 +238,7 @@
 
                     <div class="form-group">
                         <label for="inputCpf">CPF:</label> 
-                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14"  OnKeyPress="formatar('###.###.###-##', this)" required="autofocus">
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="11">
                     </div>
 
                     <div class="form-group">

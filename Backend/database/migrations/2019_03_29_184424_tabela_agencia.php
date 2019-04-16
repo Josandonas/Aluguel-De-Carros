@@ -14,7 +14,7 @@ class TabelaAgencia extends Migration
     public function up()
     {
         Schema::create('agencias', function (Blueprint $table) {
-            $table->char('id',18);
+            $table->char('id',14);
             $table->string('razao_social');
             $table->string('telefone');
             $table->string('email');

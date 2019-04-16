@@ -115,6 +115,8 @@ class AgenciaController extends Controller
     {
         $agencia = Agencia::find($id);
 
+        DB::table('carros')->where('agencia', $id)->delete();
+
         if(isset($agencia)){
             $agencia->delete();
         }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\CollectionstdClass;
 use App\Aluguel;
 
 class AluguelController extends Controller
@@ -13,9 +14,10 @@ class AluguelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $aluguel = Aluguel::find($id);
+        return view('pagfim', compact('aluguel'));
     }
 
     /**
@@ -40,19 +42,39 @@ class AluguelController extends Controller
         $valor_categoria = DB::table('carros')
         ->join('categorias', 'carros.categoria','=','categorias.id')
         ->select('categorias.valor_diaria as valor')
-        ->where('carros.id',$request->input('carro'));
+        ->where('carros.id',$request->input('carro'))->first();
+        //dd($valor_categoria->valor);
+
+        $garagem = DB::table('agencias')
+        ->join('carros', 'carros.agencia', '=', 'agencias.id')
+        ->select('agencias.razao_social as agencia')
+        ->where('carros.id', $request->input('carro'))->first();
 
         $aluguel->cliente = $request->input('cpf');
         $aluguel->carro = $request->input('carro');
+
+        $aluguel->agencia = (string)$garagem->agencia;
+
         $aluguel->data_inicio = $request->input('data_inicio');
         $aluguel->data_fim = $request->input('data_fim');
 
-        $diferenca = strtotime($aluguel->data_fim) - strtotime($aluguel->data_inicio);
-        $total = floor($diferenca / (60 * 60 * 24));
+        $time = strtotime($aluguel->data_fim);
+        $newformat = date('d',$time);
+        $final = (float) $newformat;
 
-        $aluguel->valor_total = (float)$total * (float)$valor_categoria;
+        $time = strtotime($aluguel->data_inicio);
+        $newformat = date('d',$time);
+        $inicio = (float) $newformat;
+
+        $total = $final - $inicio;
+
+        $resultado = $total * $valor_categoria->valor;
+
+        $aluguel->valor_total = $resultado;
 
         $aluguel->save();
+
+        return view('pagfim', compact('aluguel'));
 
     }
 
