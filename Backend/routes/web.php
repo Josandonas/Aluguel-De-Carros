@@ -24,9 +24,7 @@ Route::get('/luxo',function(){
     return view('carsluxo');
 });
 
-Route::get('/posLogin', function(){
-    return view('posLogin');
-});
+Route::get('/posLogin', 'AgenciaController@exibir');
 
 Route::get('/garagem',function(){
     return view('controlegaragem');
@@ -48,6 +46,8 @@ Route::get('garagem_carros/{id}', 'CarrosController@index');
 Route::get('garagem_carro-editar/{id}', 'CarrosController@edit');
 Route::post('garagem_carro_editar/{id}', 'CarrosController@update');
 Route::get('garagem_carro_apagar/{id}', 'CarrosController@destroy');
+
+Route::get('carros_da_agencia/{id}', 'CarrosController@exibir');
 
 Route::post('cadastro','ClienteController@store');
 Route::post('/login', 'ClienteController@login');

@@ -120,4 +120,11 @@ class AgenciaController extends Controller
         }
         return redirect('garagem_editar');
     }
+
+    public function exibir(){
+        $agencia = Agencia::all();
+        return view('posLogin', compact('agencia'));
+    }
+
+
 }

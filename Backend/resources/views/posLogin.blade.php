@@ -1,6 +1,5 @@
 <!DOCTYPE html>
       <html>
-
       <head>
 
         <meta charset="utf-8">
@@ -82,6 +81,31 @@
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                         <span class="validity"></span>
                       </div>-->
+       <div class="card">
+
+          <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr>
+          <td> CEP </td>
+          <td> Nome </td>
+          <td> Cidade </td>
+          <td> Estado </td>
+        </tr>
+
+            @foreach($agencia as $age)
+
+            <tr>
+              <td>{{$age->cep}}</td>
+              <td><a href=""> {{$age->razao_social}} </a></td>
+              <td> {{$age->cidade}} </td>
+              <td> {{$age->estado}} </td>
+            </tr>
+
+            @endforeach
+
+      </thead>
+          </table>
+              </div>
 
                   <div class="facareserva">
                     <div class="passo1">
